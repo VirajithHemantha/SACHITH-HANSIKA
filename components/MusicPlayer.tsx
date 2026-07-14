@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SONG_SRC = '/paulyudin-wedding-485932.mp3';
+const SONG_SRC = '/Christina_Perri_-_Thousand_years_(mp3.pm).mp3';
 
 export default function MusicPlayer() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -81,7 +81,7 @@ export default function MusicPlayer() {
                         initial={{ opacity: 0, x: 20, scale: 0.8 }}
                         animate={{ opacity: 1, x: 0, scale: 1 }}
                         exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                        className="bg-white/90 backdrop-blur-md border border-[#D4AF37]/30 rounded-full px-4 py-2 shadow-xl flex items-center gap-2 mb-2"
+                        className="bg-background/90 backdrop-blur-md border border-secondary/30 rounded-full px-4 py-2 shadow-xl flex items-center gap-2 mb-2"
                         style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}
                     >
                         <motion.span
@@ -91,7 +91,7 @@ export default function MusicPlayer() {
                         >
                             🎵
                         </motion.span>
-                        <span className="text-[11px] font-medium text-[#8B735B] uppercase tracking-wider">
+                        <span className="text-[11px] font-medium text-primary uppercase tracking-wider">
                             Tap for Wedding Music
                         </span>
                     </motion.div>
@@ -103,9 +103,9 @@ export default function MusicPlayer() {
                 onClick={toggle}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="pointer-events-auto relative w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(212,175,55,0.4)] border-2 border-white group"
+                className="pointer-events-auto relative w-14 h-14 rounded-full flex items-center justify-center shadow-md shadow-foreground/20 border-2 border-background group"
                 style={{
-                    background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)',
+                    background: 'linear-gradient(135deg, #AC8E73 0%, #B8860B 100%)',
                 }}
                 aria-label={isPlaying ? 'Pause music' : 'Play music'}
             >
@@ -113,13 +113,13 @@ export default function MusicPlayer() {
                 {isPlaying && (
                     <>
                         <motion.div
-                            className="absolute inset-0 rounded-full border border-[#D4AF37]/40"
+                            className="absolute inset-0 rounded-full border border-secondary/40"
                             animate={{ scale: [1, 1.8], opacity: [0.5, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
                             style={{ borderColor: 'rgba(212, 175, 55, 0.4)' }}
                         />
                         <motion.div
-                            className="absolute inset-0 rounded-full border border-[#D4AF37]/40"
+                            className="absolute inset-0 rounded-full border border-secondary/40"
                             animate={{ scale: [1, 1.4], opacity: [0.5, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: 0.5 }}
                             style={{ borderColor: 'rgba(212, 175, 55, 0.4)' }}
@@ -148,7 +148,7 @@ export default function MusicPlayer() {
                                         delay: i * 0.1,
                                         ease: "easeInOut"
                                     }}
-                                    className="w-1 bg-white rounded-full"
+                                    className="w-1 bg-background rounded-full"
                                 />
                             ))}
                         </div>
@@ -168,7 +168,7 @@ export default function MusicPlayer() {
                 <motion.div
                     animate={isPlaying ? { scale: [1, 1.5, 1], opacity: [0.8, 1, 0.8] } : { scale: 1 }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className={`absolute top-0 right-0 w-3 h-3 rounded-full border-2 border-white ${isPlaying ? 'bg-green-400' : 'bg-red-400'}`}
+                    className={`absolute top-0 right-0 w-3 h-3 rounded-full border-2 border-background ${isPlaying ? 'bg-green-400' : 'bg-red-400'}`}
                 />
             </motion.button>
         </div>

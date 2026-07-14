@@ -34,7 +34,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-white to-champagne py-20 px-4 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-background to-champagne py-20 px-4 overflow-hidden">
       {/* Decorative Top Border */}
       <motion.div
         initial={{ scaleX: 0 }}
@@ -53,7 +53,7 @@ export function Footer() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-10 right-20 w-40 h-40 rounded-full bg-gold/5 blur-2xl"
+        className="absolute top-10 right-20 w-40 h-40 rounded-full bg-secondary/5 blur-2xl"
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -69,7 +69,7 @@ export function Footer() {
             variants={itemVariants}
             className="text-center md:text-left space-y-4"
           >
-            <h3 className="text-3xl font-serif font-light text-gold">VIMUKTHI & PIUMI</h3>
+            <h3 className="text-3xl font-serif font-light text-secondary">VIMUKTHI & PIUMI</h3>
             <p className="text-dark-text font-light leading-relaxed">
               Celebrating the union of two souls and the beginning of our forever journey.
             </p>
@@ -93,10 +93,10 @@ export function Footer() {
             variants={itemVariants}
             className="text-center space-y-4"
           >
-            <p className="text-xl font-serif font-light text-gold italic">
+            <p className="text-xl font-serif font-light text-secondary italic">
               "Two hearts, one love, infinite possibilities"
             </p>
-            <div className="w-12 h-1 bg-gold/30 mx-auto" />
+            <div className="w-12 h-1 bg-secondary/30 mx-auto" />
             <p className="text-dark-text font-light text-sm">
               May 30, 2026
             </p>
@@ -140,7 +140,7 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center space-y-6 py-8"
         >
-          <p className="text-xl font-serif font-light text-gold italic">
+          <p className="text-xl font-serif font-light text-secondary italic">
             We would be honored to celebrate this beautiful moment with you.
           </p>
 
@@ -180,7 +180,7 @@ export function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="border-t border-gold/20 pt-8 mt-8 text-center space-y-3"
+          className="border-t border-secondary/20 pt-8 mt-8 text-center space-y-3"
         >
           <p className="text-dark-text font-light text-sm">
             VIMUKTHI & PIUMI's Wedding Celebration
@@ -193,7 +193,7 @@ export function Footer() {
           <motion.div
             animate={{ opacity: [0.3, 0.6, 0.3] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="inline-block text-gold text-sm"
+            className="inline-block text-secondary text-sm"
           >
             ✨ ✨ ✨
           </motion.div>
@@ -204,7 +204,7 @@ export function Footer() {
       {Array.from({ length: 5 }).map((_, i) => (
         <motion.div
           key={`footer-deco-${i}`}
-          className="absolute text-gold opacity-20"
+          className="absolute text-secondary opacity-20"
           animate={{
             y: [0, -40, 0],
             x: [0, Math.sin(i) * 30, 0],

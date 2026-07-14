@@ -6,7 +6,7 @@ import { viewportSettings } from '@/lib/animations';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 pb-10 overflow-hidden bg-gradient-to-b from-ivory via-champagne to-white">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 pb-10 overflow-hidden bg-gradient-to-b from-ivory via-champagne to-background">
       {/* Animated Background Elements */}
       <motion.div
         animate={{
@@ -17,7 +17,7 @@ export function HeroSection() {
           ease: 'easeInOut',
           repeat: Infinity,
         }}
-        className="absolute top-10 right-20 w-40 h-40 rounded-full bg-gold/5 blur-3xl"
+        className="absolute top-10 right-20 w-40 h-40 rounded-full bg-secondary/5 blur-3xl"
       />
       <motion.div
         animate={{
@@ -41,7 +41,7 @@ export function HeroSection() {
           viewport={viewportSettings}
           className="flex justify-center"
         >
-          <div className="text-gold text-4xl">💍</div>
+          <div className="text-secondary text-4xl">💍</div>
         </motion.div>
 
         {/* Main Heading */}
@@ -52,7 +52,7 @@ export function HeroSection() {
           viewport={viewportSettings}
           className="space-y-4"
         >
-          <h1 className="text-7xl md:text-8xl font-serif font-light text-gold leading-tight">
+          <h1 className="text-7xl md:text-8xl font-serif font-light text-secondary leading-tight">
             VIMUKTHI & PIUMI
           </h1>
 
@@ -98,7 +98,7 @@ export function HeroSection() {
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="text-gold text-3xl"
+              className="text-secondary text-3xl"
             >
               ✨
             </motion.div>
@@ -113,7 +113,7 @@ export function HeroSection() {
           viewport={viewportSettings}
           className="pt-12"
         >
-          <p className="text-gold text-lg font-serif font-light tracking-widest">
+          <p className="text-secondary text-lg font-serif font-light tracking-widest">
             05.30.2026
           </p>
         </motion.div>
@@ -123,7 +123,7 @@ export function HeroSection() {
       {Array.from({ length: 4 }).map((_, i) => (
         <motion.div
           key={`lotus-${i}`}
-          className="absolute text-gold text-4xl opacity-20"
+          className="absolute text-secondary text-4xl opacity-20"
           animate={{
             y: [0, -30, 0],
             x: [0, Math.sin(i) * 20, 0],

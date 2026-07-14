@@ -94,7 +94,7 @@ export default function RSVP() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="rounded-lg p-8 md:p-12 bg-white relative overflow-hidden"
+          className="rounded-lg p-8 md:p-12 bg-background relative overflow-hidden"
           style={{
             boxShadow:
               '0 20px 60px rgba(212, 175, 55, 0.15), 0 0 40px rgba(212, 175, 55, 0.08)',
@@ -140,7 +140,7 @@ export default function RSVP() {
                     value={formData.attending}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                     style={{
                       borderColor: 'var(--border)',
                       '--tw-ring-color': 'var(--primary)',
@@ -169,7 +169,7 @@ export default function RSVP() {
                       name="guests"
                       value={formData.guests}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                      className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                       style={{
                         borderColor: 'var(--border)',
                         '--tw-ring-color': 'var(--primary)',
@@ -201,7 +201,7 @@ export default function RSVP() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                  className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                   style={{
                     borderColor: 'var(--border)',
                     '--tw-ring-color': 'var(--primary)',
@@ -227,7 +227,7 @@ export default function RSVP() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                     style={{
                       borderColor: 'var(--border)',
                       '--tw-ring-color': 'var(--primary)',
@@ -250,7 +250,7 @@ export default function RSVP() {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                     style={{
                       borderColor: 'var(--border)',
                       '--tw-ring-color': 'var(--primary)',
@@ -279,7 +279,7 @@ export default function RSVP() {
                     type="text"
                     value={formData.dietary}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2"
                     style={{
                       borderColor: 'var(--border)',
                       '--tw-ring-color': 'var(--primary)',
@@ -304,7 +304,7 @@ export default function RSVP() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border-2 bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 resize-none"
+                  className="w-full px-4 py-3 rounded-lg border-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 resize-none"
                   style={{
                     borderColor: 'var(--border)',
                     '--tw-ring-color': 'var(--primary)',

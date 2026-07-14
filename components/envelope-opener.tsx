@@ -54,7 +54,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.12),transparent_35%),linear-gradient(135deg,#2a060c_0%,#4a0f18_38%,#681322_65%,#2c0710_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(174,146,93,0.12),transparent_35%),linear-gradient(135deg,#FAF6F0_0%,#DDB2A2_50%,#AC8E73_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -68,8 +68,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               ease: 'easeInOut',
             }}
           >
-            <div className="absolute top-[-12rem] left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[#C9A227]/10 blur-3xl" />
-            <div className="absolute bottom-[-10rem] left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#f5e6c8]/[0.07] blur-3xl" />
+            <div className="absolute top-[-12rem] left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-secondary/10 blur-3xl" />
+            <div className="absolute bottom-[-10rem] left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-secondary/[0.07] blur-3xl" />
           </motion.div>
 
           {/* Spotlight */}
@@ -93,9 +93,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               className="h-full w-full"
               style={{
                 backgroundImage: `
-                  radial-gradient(circle at 20px 20px, rgba(201,162,39,0.35) 1.2px, transparent 1.2px),
-                  linear-gradient(rgba(201,162,39,0.12) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(201,162,39,0.12) 1px, transparent 1px)
+                  radial-gradient(circle at 20px 20px, rgba(174,146,93,0.35) 1.2px, transparent 1.2px),
+                  linear-gradient(rgba(174,146,93,0.12) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(174,146,93,0.12) 1px, transparent 1px)
                 `,
                 backgroundSize: '40px 40px, 80px 80px, 80px 80px',
                 backgroundPosition: '0 0, 0 0, 0 0',
@@ -104,17 +104,17 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           </div>
 
           {/* Top and bottom ornamental fade */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/25 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/30 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-foreground/25 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-foreground/30 to-transparent" />
 
           {/* Gold ceremonial rings */}
           <motion.div
-            className="absolute -top-24 -right-24 h-72 w-72 rounded-full border border-[#C9A227]/15"
+            className="absolute -top-24 -right-24 h-72 w-72 rounded-full border border-secondary/15"
             animate={{ rotate: 360 }}
             transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
           />
           <motion.div
-            className="absolute -bottom-28 -left-28 h-96 w-96 rounded-full border border-[#C9A227]/10"
+            className="absolute -bottom-28 -left-28 h-96 w-96 rounded-full border border-secondary/10"
             animate={{ rotate: -360 }}
             transition={{ duration: 34, repeat: Infinity, ease: 'linear' }}
           />
@@ -124,7 +124,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             {sparkles.map((item) => (
               <motion.span
                 key={item.id}
-                className="absolute h-1 w-1 rounded-full bg-[#f8e6a6]"
+                className="absolute h-1 w-1 rounded-full bg-secondary"
                 style={{ left: item.left, top: item.top }}
                 animate={{
                   opacity: [0, 0.8, 0],
@@ -161,7 +161,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 }}
               >
                 <div
-                  className="h-5 w-3 rounded-full bg-gradient-to-b from-[#f4d6da] via-[#e8a9b5] to-[#7d1a2f] shadow-[0_0_14px_rgba(255,220,220,0.18)]"
+                  className="h-5 w-3 rounded-full bg-gradient-to-b from-[#FAF6F0] via-[#DDB2A2] to-[#B77F74] shadow-md shadow-foreground/20"
                   style={{
                     transform: `scale(${petal.scale}) rotate(18deg)`,
                     borderRadius: '70% 30% 70% 30% / 70% 30% 70% 30%',
@@ -190,13 +190,13 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               className="mb-8 text-center"
             >
               <div className="mb-3 flex items-center justify-center gap-4">
-                <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-                <p className="text-[10px] uppercase tracking-[0.45em] text-[#f5e6c8]/80">
+                <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#AE925D]/70" />
+                <p className="text-[10px] uppercase tracking-[0.45em] text-primary/80">
                   A Wedding Invitation
                 </p>
-                <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+                <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#AE925D]/70" />
               </div>
-              <p className="text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
+              <p className="text-[11px] tracking-[0.24em] text-primary/70">
                 Unveil the moment
               </p>
             </motion.div>
@@ -209,14 +209,14 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               className="relative"
             >
               <motion.div
-                className="absolute -inset-8 -z-20 rounded-[3rem] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(201,162,39,0.0),rgba(201,162,39,0.2),rgba(201,162,39,0.0),rgba(201,162,39,0.18),rgba(201,162,39,0.0))] blur-2xl"
+                className="absolute -inset-8 -z-20 rounded-[3rem] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(174,146,93,0.0),rgba(174,146,93,0.2),rgba(174,146,93,0.0),rgba(174,146,93,0.18),rgba(174,146,93,0.0))] blur-2xl"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
               />
 
               {/* Outer aura */}
               <motion.div
-                className="absolute inset-0 -z-10 rounded-[2.5rem] bg-[#C9A227]/10 blur-3xl"
+                className="absolute inset-0 -z-10 rounded-[2.5rem] bg-secondary/10 blur-3xl"
                 animate={{
                   scale: [1, 1.08, 1],
                   opacity: [0.55, 0.8, 0.55],
@@ -229,8 +229,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               />
 
               {/* Decorative frame */}
-              <div className="absolute -inset-6 rounded-[2rem] border border-[#C9A227]/15" />
-              <div className="absolute -inset-3 rounded-[1.6rem] border border-[#f5e6c8]/10" />
+              <div className="absolute -inset-6 rounded-[2rem] border border-secondary/15" />
+              <div className="absolute -inset-3 rounded-[1.6rem] border border-secondary/10" />
 
               <motion.button
                 type="button"
@@ -239,13 +239,13 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 whileTap={!isOpen ? { scale: 0.995 } : {}}
                 className="group relative block cursor-pointer isolate"
               >
-                <div className="pointer-events-none absolute -inset-3 rounded-[2rem] border border-[#f4dc9c]/40 opacity-60" />
+                <div className="pointer-events-none absolute -inset-3 rounded-[2rem] border border-secondary/40 opacity-60" />
 
                 {/* Envelope body */}
                 <motion.div
                   animate={isOpen ? { y: 56, opacity: 0 } : { y: 0, opacity: 1 }}
                   transition={{ duration: 0.9, ease: 'easeOut' }}
-                  className="relative h-[260px] w-[420px] overflow-hidden rounded-[28px] border border-[#C9A227]/25 bg-[linear-gradient(180deg,rgba(245,230,200,0.95)_0%,rgba(255,248,236,0.98)_100%)] shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                  className="relative h-[260px] w-[420px] overflow-hidden rounded-[28px] border border-secondary/25 bg-[linear-gradient(180deg,rgba(250,246,240,0.95)_0%,rgba(255,255,255,0.98)_100%)] shadow-md shadow-foreground/20"
                 >
                   {/* Inner texture */}
                   <div className="absolute inset-0 opacity-[0.08]">
@@ -253,7 +253,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       className="h-full w-full"
                       style={{
                         backgroundImage: `
-                          radial-gradient(circle at center, rgba(201,162,39,0.25) 1px, transparent 1px)
+                          radial-gradient(circle at center, rgba(174,146,93,0.25) 1px, transparent 1px)
                         `,
                         backgroundSize: '24px 24px',
                       }}
@@ -261,16 +261,16 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                   </div>
 
                   {/* Premium foil layers for closed-envelope look */}
-                  <div className="pointer-events-none absolute inset-[8px] rounded-[22px] border border-[#f2d89c]/40" />
-                  <div className="pointer-events-none absolute inset-[14px] rounded-[18px] border border-[#c9a227]/20" />
+                  <div className="pointer-events-none absolute inset-[8px] rounded-[22px] border border-secondary/40" />
+                  <div className="pointer-events-none absolute inset-[14px] rounded-[18px] border border-secondary/20" />
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(128deg,rgba(255,255,255,0.26)_0%,transparent_36%,transparent_64%,rgba(255,255,255,0.2)_100%)]" />
 
                   {!isOpen && (
                     <>
-                      <div className="pointer-events-none absolute left-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute bottom-5 left-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute bottom-5 right-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
+                      <div className="pointer-events-none absolute left-5 top-5 h-8 w-8 rounded-lg border border-secondary/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(174,146,93,0.15))]" />
+                      <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 rounded-lg border border-secondary/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(174,146,93,0.15))]" />
+                      <div className="pointer-events-none absolute bottom-5 left-5 h-8 w-8 rounded-lg border border-secondary/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(174,146,93,0.15))]" />
+                      <div className="pointer-events-none absolute bottom-5 right-5 h-8 w-8 rounded-lg border border-secondary/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(174,146,93,0.15))]" />
                     </>
                   )}
 
@@ -289,22 +289,14 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
                     }}
                   >
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,#a57b16_0%,#c9a227_38%,#e0c46d_100%)] shadow-[0_18px_40px_rgba(0,0,0,0.22)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,#AE925D_0%,#AC8E73_38%,#B77F74_100%)] shadow-md shadow-foreground/20" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.22),transparent_45%)]" />
 
                     {/* Flap ornament */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="rounded-full border border-white/20 p-4">
-                        <svg
-                          className="h-10 w-10 text-white/75"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.3"
-                        >
-                          <path d="M12 3c1.8 2.5 3.8 4.3 6.5 5.3-1.6 2.3-3.8 3.7-6.5 4.7-2.7-1-4.9-2.4-6.5-4.7C8.2 7.3 10.2 5.5 12 3Z" />
-                          <path d="M12 11.8c1.2 1.8 2.5 3.1 4.5 3.8-1.1 1.5-2.5 2.5-4.5 3.2-2-.7-3.4-1.7-4.5-3.2 2-.7 3.3-2 4.5-3.8Z" />
-                        </svg>
+                      <div className="flex h-[72px] w-[72px] -translate-y-8 items-center justify-center rounded-full border-[1px] border-[#FAF6F0]/40 relative">
+                         <div className="absolute inset-1 border-[0.5px] border-[#FAF6F0]/25 rounded-full" />
+                         <span className="font-serif text-2xl text-[#FAF6F0]/90 drop-shadow-md">SH</span>
                       </div>
                     </div>
 
@@ -312,18 +304,18 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
-                        className="pointer-events-none absolute inset-0 m-auto h-20 w-20 rounded-full border border-white/25"
+                        className="pointer-events-none absolute inset-0 m-auto h-20 w-20 rounded-full border border-background/25"
                       />
                     )}
                   </motion.div>
 
                   {/* Side folds */}
                   <div
-                    className="absolute bottom-0 left-0 h-[62%] w-1/2 bg-[linear-gradient(135deg,rgba(201,162,39,0.12),rgba(255,255,255,0.55))]"
+                    className="absolute bottom-0 left-0 h-[62%] w-1/2 bg-[linear-gradient(135deg,rgba(174,146,93,0.12),rgba(255,255,255,0.55))]"
                     style={{ clipPath: 'polygon(0 0, 100% 100%, 0 100%)' }}
                   />
                   <div
-                    className="absolute bottom-0 right-0 h-[62%] w-1/2 bg-[linear-gradient(225deg,rgba(201,162,39,0.12),rgba(255,255,255,0.55))]"
+                    className="absolute bottom-0 right-0 h-[62%] w-1/2 bg-[linear-gradient(225deg,rgba(174,146,93,0.12),rgba(255,255,255,0.55))]"
                     style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
                   />
 
@@ -335,15 +327,15 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       transition={{ duration: 0.35 }}
                       className="translate-y-4"
                     >
-                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-[#6d1424] drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-4 sm:gap-6">
-                        <span>VIMUKTHI</span>
-                        <span aria-hidden="true">&amp;</span>
-                        <span>PIUMI</span>
-                      </h3>
+                      <div className="font-serif text-xl tracking-[0.1em] text-secondary">
+                        <span>SACHITH</span>
+                        <span className="mx-2 italic">&</span>
+                        <span>HANSIKA</span>
+                      </div>
                       <div className="mt-4 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#C9A227]/50" />
-                        <span className="text-[#C9A227]">✦</span>
-                        <span className="h-px w-10 bg-[#C9A227]/50" />
+                        <span className="h-px w-10 bg-secondary/50" />
+                        <span className="text-primary">✦</span>
+                        <span className="h-px w-10 bg-secondary/50" />
                       </div>
                     </motion.div>
                   </div>
@@ -356,14 +348,14 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       repeat: !isOpen ? Infinity : 0,
                       ease: 'easeInOut',
                     }}
-                    className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#f2d89c]/40 bg-[radial-gradient(circle_at_30%_30%,#a61d35_0%,#7a1226_55%,#5b0d1c_100%)] shadow-[0_10px_30px_rgba(90,13,28,0.45)]"
+                    className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/40 bg-[radial-gradient(circle_at_30%_30%,#B77F74_0%,#74472D_55%,#53301D_100%)] shadow-md shadow-foreground/20"
                   >
-                    <span className="font-serif text-lg text-[#f5e6c8]">V ✦ P</span>
+                    <span className="font-serif text-lg text-[#FAF6F0] drop-shadow-sm">S ✦ H</span>
                   </motion.div>
 
                   {/* Hover sheen */}
                   <motion.div
-                    className="absolute inset-y-0 left-[-30%] w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent"
+                    className="absolute inset-y-0 left-[-30%] w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-background/35 to-transparent"
                     animate={!isOpen ? { left: ['-35%', '125%'] } : {}}
                     transition={{
                       duration: 2.8,
@@ -389,58 +381,57 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                   }}
                   className="pointer-events-none absolute left-1/2 top-[56px] w-[360px] -translate-x-1/2"
                 >
-                  <div className="relative overflow-hidden rounded-[24px] border border-[#C9A227]/35 bg-[linear-gradient(180deg,rgba(248,236,214,0.98)_0%,rgba(255,252,247,0.99)_100%)] px-8 py-10 shadow-[0_25px_60px_rgba(0,0,0,0.28)]">
+                  <div className="relative overflow-hidden rounded-[24px] border border-secondary/35 bg-[linear-gradient(180deg,rgba(250,246,240,0.98)_0%,rgba(255,255,255,0.99)_100%)] px-8 py-10 shadow-md shadow-foreground/20">
                     {/* Card glow */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.18),transparent_44%)]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(174,146,93,0.18),transparent_44%)]" />
 
                     {/* Card frame */}
-                    <div className="absolute inset-3 rounded-[18px] border border-[#C9A227]/25" />
-                    <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-[#C9A227]/50 bg-white/70 text-center text-[10px] leading-8 text-[#8c6a16]">
-                      VP
+                    <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-secondary/50 bg-background/70 text-center text-[10px] leading-8 text-primary">
+                      SH
                     </div>
 
                     {/* Card ornament */}
                     <div className="relative text-center">
                       <div className="space-y-2 mb-3">
-                        <p className="text-[9px] uppercase tracking-[0.28em] text-[#8c6a16]">
+                        <p className="text-[9px] uppercase tracking-[0.28em] text-primary">
                           Together with their families
                         </p>
-                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
+                        <p className="text-[9px] leading-5 text-primary">
                           Bride, the loving daughter of<br />
-                          <span className="font-semibold">T H ANUSHA SHIRANTHI</span> (Mother) and <span className="font-semibold">G DAYAWANSA</span> (Father)
+                          <span className="font-semibold">MRS. A.W.S.K GUNARATHNA</span> (Mother) and <span className="font-semibold">MR. P.A PATHMASIRI</span> (Father)
                         </p>
-                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
+                        <p className="text-[9px] leading-5 text-primary">
                           Groom, the loving son of<br />
-                          <span className="font-semibold">M HELAN DAMMIKA FERNANDO</span> (Mother) and <span className="font-semibold">W A NELSON MERIL FERNANDO</span> (Father)
+                          <span className="font-semibold">MRS. S.C.P ATTANAYAKE</span> (Mother) and <span className="font-semibold">MR. E.G.S ELAKUMBURA</span> (Father)
                         </p>
                       </div>
 
                       <div className="mt-4 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#C9A227]/45" />
-                        <span className="text-[#C9A227]">❋</span>
-                        <span className="h-px w-10 bg-[#C9A227]/45" />
+                        <span className="h-px w-10 bg-secondary/45" />
+                        <span className="text-primary">❋</span>
+                        <span className="h-px w-10 bg-secondary/45" />
                       </div>
 
-                      <h2 className="mt-5 font-serif text-4xl font-light tracking-[0.08em] text-[#6d1424]">
-                        VIMUKTHI
+                      <h2 className="mt-5 font-serif text-4xl font-light tracking-[0.08em] text-primary">
+                        SACHITH
                       </h2>
-                      <p className="mt-1 font-serif text-lg italic text-[#b08a1f]">&</p>
-                      <h2 className="font-serif text-4xl font-light tracking-[0.08em] text-[#6d1424]">
-                        PIUMI
+                      <p className="mt-1 font-serif text-lg italic text-primary">&</p>
+                      <h2 className="font-serif text-4xl font-light tracking-[0.08em] text-primary">
+                        HANSIKA
                       </h2>
 
-                      <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-[#5f5146]">
-                        Invite you to witness a blessed Christian marriage ceremony filled with love, prayer, and grace.
+                      <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-primary">
+                        Invite you to witness our traditional Poruwa Ceremony filled with love and joy.
                       </p>
 
                       <div className="mt-6 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#C9A227]/45" />
-                        <span className="text-[#C9A227]">✦</span>
-                        <span className="h-px w-10 bg-[#C9A227]/45" />
+                        <span className="h-px w-10 bg-secondary/45" />
+                        <span className="text-primary">✦</span>
+                        <span className="h-px w-10 bg-secondary/45" />
                       </div>
 
-                      <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-[#8c6a16]">
-                        May 30, 2026
+                      <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary/90">
+                        September 13, 2026
                       </p>
                     </div>
                   </div>
@@ -452,7 +443,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
                 transition={{ duration: 0.4 }}
-                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#f5e6c8]/80"
+                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-primary/80"
               >
                 Touch to Unveil
               </motion.p>

@@ -25,7 +25,7 @@ export function LocationSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-4 bg-white overflow-hidden">
+    <section className="relative py-20 md:py-32 px-4 bg-background overflow-hidden">
       {/* Decorative Elements */}
       <motion.div
         animate={{
@@ -36,7 +36,7 @@ export function LocationSection() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-20 right-20 w-40 h-40 rounded-full bg-gold/5 blur-2xl"
+        className="absolute top-20 right-20 w-40 h-40 rounded-full bg-secondary/5 blur-2xl"
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -48,8 +48,8 @@ export function LocationSection() {
           viewport={viewportSettings}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-serif font-light text-gold mb-4">Find Us Here</h2>
-          <div className="w-16 h-1 bg-gold/30 mx-auto" />
+          <h2 className="text-5xl font-serif font-light text-secondary mb-4">Find Us Here</h2>
+          <div className="w-16 h-1 bg-secondary/30 mx-auto" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -59,12 +59,12 @@ export function LocationSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={viewportSettings}
-            className="relative rounded-lg overflow-hidden border-2 border-gold/20 aspect-square"
+            className="relative rounded-lg overflow-hidden border-2 border-secondary/20 aspect-square"
           >
             {/* Map Placeholder */}
             <div className="w-full h-full bg-gradient-to-br from-champagne via-gold/10 to-rose-accent/10 flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-gold/50 mx-auto mb-4" />
+                <MapPin className="w-16 h-16 text-secondary/50 mx-auto mb-4" />
                 <p className="text-dark-text font-light">
                   Golden Rose Hotel<br />
                   Colombo, Sri Lanka
@@ -114,9 +114,9 @@ export function LocationSection() {
                         repeat: Infinity,
                         ease: 'easeInOut',
                       }}
-                      className="p-3 bg-gold/10 rounded-lg"
+                      className="p-3 bg-secondary/10 rounded-lg"
                     >
-                      <Icon className="w-6 h-6 text-gold" />
+                      <Icon className="w-6 h-6 text-secondary" />
                     </motion.div>
                     <h3 className="text-2xl font-serif font-light text-dark-text">
                       {info.title}
@@ -141,7 +141,7 @@ export function LocationSection() {
                       delay: 0.3 + idx * 0.2,
                     }}
                     viewport={viewportSettings}
-                    className="h-0.5 w-12 bg-gold/30 origin-left"
+                    className="h-0.5 w-12 bg-secondary/30 origin-left"
                   />
                 </motion.div>
               );
@@ -158,7 +158,7 @@ export function LocationSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-3 px-6 border-2 border-gold text-gold font-light rounded-lg hover:bg-gold hover:text-white transition-all duration-300"
+                className="w-full py-3 px-6 border-2 border-secondary text-secondary font-light rounded-lg hover:bg-secondary hover:text-background transition-all duration-300"
               >
                 Get Directions
               </motion.button>
@@ -172,7 +172,7 @@ export function LocationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={viewportSettings}
-          className="mt-16 p-8 bg-champagne/50 border-l-4 border-gold rounded-lg text-center"
+          className="mt-16 p-8 bg-secondary/50 border-l-4 border-secondary rounded-lg text-center"
         >
           <p className="text-dark-text font-light">
             Parking available on-site. Valet service provided for guests.

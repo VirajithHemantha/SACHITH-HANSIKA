@@ -59,7 +59,7 @@ export function RSVPForm() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full border border-gold/5"
+        className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full border border-secondary/5"
       />
 
       <div className="max-w-2xl mx-auto relative z-10">
@@ -71,11 +71,11 @@ export function RSVPForm() {
           viewport={viewportSettings}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-serif font-light text-gold mb-4">RSVP</h2>
+          <h2 className="text-5xl font-serif font-light text-secondary mb-4">RSVP</h2>
           <p className="text-dark-text font-light text-lg">
             Please confirm your attendance by June 1st
           </p>
-          <div className="w-16 h-1 bg-gold/30 mx-auto mt-4" />
+          <div className="w-16 h-1 bg-secondary/30 mx-auto mt-4" />
         </motion.div>
 
         {/* Form Container */}
@@ -88,7 +88,7 @@ export function RSVPForm() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               onSubmit={handleSubmit}
-              className="space-y-6 p-8 bg-white border-2 border-gold/20 rounded-lg"
+              className="space-y-6 p-8 bg-background border-2 border-secondary/20 rounded-lg"
             >
               {/* Text Input Fields */}
               <div className="grid md:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@ export function RSVPForm() {
                   >
                     <label className="block text-sm font-light text-dark-text mb-2">
                       {field.label}
-                      {field.required && <span className="text-gold ml-1">*</span>}
+                      {field.required && <span className="text-secondary ml-1">*</span>}
                     </label>
                     <motion.input
                       whileFocus={{ scale: 1.02 }}
@@ -112,7 +112,7 @@ export function RSVPForm() {
                       value={formData[field.name as keyof typeof formData]}
                       onChange={handleChange}
                       required={field.required}
-                      className="w-full px-4 py-2 border-2 border-gold/20 rounded-lg focus:outline-none focus:border-gold transition-all bg-white font-light"
+                      className="w-full px-4 py-2 border-2 border-secondary/20 rounded-lg focus:outline-none focus:border-secondary transition-all bg-background font-light"
                     />
                   </motion.div>
                 ))}
@@ -128,14 +128,14 @@ export function RSVPForm() {
                 {/* Number of Guests */}
                 <div>
                   <label className="block text-sm font-light text-dark-text mb-2">
-                    Number of Guests <span className="text-gold">*</span>
+                    Number of Guests <span className="text-secondary">*</span>
                   </label>
                   <motion.select
                     whileFocus={{ scale: 1.02 }}
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border-2 border-gold/20 rounded-lg focus:outline-none focus:border-gold transition-all bg-white font-light cursor-pointer"
+                    className="w-full px-4 py-2 border-2 border-secondary/20 rounded-lg focus:outline-none focus:border-secondary transition-all bg-background font-light cursor-pointer"
                   >
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
@@ -155,7 +155,7 @@ export function RSVPForm() {
                     name="dietary"
                     value={formData.dietary}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border-2 border-gold/20 rounded-lg focus:outline-none focus:border-gold transition-all bg-white font-light cursor-pointer"
+                    className="w-full px-4 py-2 border-2 border-secondary/20 rounded-lg focus:outline-none focus:border-secondary transition-all bg-background font-light cursor-pointer"
                   >
                     <option value="">None</option>
                     <option value="vegetarian">Vegetarian</option>
@@ -182,7 +182,7 @@ export function RSVPForm() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-2 border-2 border-gold/20 rounded-lg focus:outline-none focus:border-gold transition-all bg-white font-light resize-none"
+                  className="w-full px-4 py-2 border-2 border-secondary/20 rounded-lg focus:outline-none focus:border-secondary transition-all bg-background font-light resize-none"
                 />
               </motion.div>
 
@@ -197,7 +197,7 @@ export function RSVPForm() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="flex-1 py-3 px-6 bg-gold text-white font-light rounded-lg hover:bg-gold/90 transition-all duration-300"
+                  className="flex-1 py-3 px-6 bg-secondary text-background font-light rounded-lg hover:bg-secondary/90 transition-all duration-300"
                 >
                   Submit RSVP
                 </motion.button>
@@ -205,7 +205,7 @@ export function RSVPForm() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   type="reset"
-                  className="flex-1 py-3 px-6 border-2 border-gold text-gold font-light rounded-lg hover:bg-gold/10 transition-all duration-300"
+                  className="flex-1 py-3 px-6 border-2 border-secondary text-secondary font-light rounded-lg hover:bg-secondary/10 transition-all duration-300"
                 >
                   Clear
                 </motion.button>
@@ -223,7 +223,7 @@ export function RSVPForm() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5 }}
-              className="p-12 bg-white border-2 border-gold/20 rounded-lg text-center space-y-6"
+              className="p-12 bg-background border-2 border-secondary/20 rounded-lg text-center space-y-6"
             >
               {/* Success Icon */}
               <motion.div
@@ -242,7 +242,7 @@ export function RSVPForm() {
 
               {/* Success Message */}
               <div className="space-y-2">
-                <h3 className="text-3xl font-serif font-light text-gold">Thank You!</h3>
+                <h3 className="text-3xl font-serif font-light text-secondary">Thank You!</h3>
                 <p className="text-dark-text font-light">
                   We have received your RSVP and are thrilled to celebrate with you!
                 </p>
@@ -253,7 +253,7 @@ export function RSVPForm() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="p-4 bg-champagne/50 rounded-lg"
+                className="p-4 bg-secondary/50 rounded-lg"
               >
                 <p className="text-sm text-dark-text font-light">
                   A confirmation email has been sent to <br />

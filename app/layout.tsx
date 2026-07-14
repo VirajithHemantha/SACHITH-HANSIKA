@@ -16,17 +16,33 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'VIMUKTHI & PIUMI Wedding',
-  description: 'Join us as we celebrate the blessed Christian union of VIMUKTHI and PIUMI on May 30, 2026.',
+  title: 'SACHITH & HANSIKA Wedding',
+  description: 'Join us as we celebrate the wedding of SACHITH and HANSIKA on September 13, 2026.',
   generator: 'v0.app',
   icons: {
-    icon: '/wedding-icon.png',
-    apple: '/wedding-icon.png',
+    icon: '/heart-icon.svg',
+    apple: '/heart-icon.svg',
+  },
+  openGraph: {
+    title: 'SACHITH & HANSIKA Wedding',
+    description: 'Join us as we celebrate the wedding of SACHITH and HANSIKA on September 13, 2026.',
+    url: 'https://sachith-hansika-wedding.com',
+    siteName: 'SACHITH & HANSIKA Wedding',
+    images: [
+      {
+        url: '/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SACHITH & HANSIKA',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#D4AF37',
+  themeColor: '#AC8E73',
   width: 'device-width',
   initialScale: 1,
   userScalable: true,

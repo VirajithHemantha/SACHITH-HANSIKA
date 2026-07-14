@@ -39,9 +39,9 @@ export function EventDetails() {
     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f4dfc2_18%,#6d1324_68%,#2c0610_100%)] px-4 py-24 md:px-6 md:py-32">
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-8 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#C9A227]/12 blur-3xl" />
-        <div className="absolute left-0 top-16 h-72 w-72 rounded-full bg-[#fff1d8]/18 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-8 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-secondary/12 blur-3xl" />
+        <div className="absolute left-0 top-16 h-72 w-72 rounded-full bg-secondary/18 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-secondary/10 blur-3xl" />
       </div>
 
       {/* Pattern overlay */}
@@ -64,7 +64,7 @@ export function EventDetails() {
         {floatingParticles.map((particle) => (
           <motion.span
             key={particle.id}
-            className="absolute h-1.5 w-1.5 rounded-full bg-[#f5d77b]/60"
+            className="absolute h-1.5 w-1.5 rounded-full bg-secondary/60"
             style={{ left: particle.left, top: particle.top }}
             animate={{
               opacity: [0, 0.8, 0],
@@ -85,15 +85,15 @@ export function EventDetails() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-        className="pointer-events-none absolute right-10 top-16 h-56 w-56 rounded-full border border-[#C9A227]/10"
+        className="pointer-events-none absolute right-10 top-16 h-56 w-56 rounded-full border border-secondary/10"
       />
 
       {/* Top divider */}
       <div className="pointer-events-none absolute inset-x-0 top-10 flex justify-center">
         <div className="flex items-center gap-4">
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-          <span className="text-[#C9A227]">✦</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#AE925D]/70" />
+          <span className="text-primary">✦</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#AE925D]/70" />
         </div>
       </div>
 
@@ -106,26 +106,26 @@ export function EventDetails() {
           viewport={viewportSettings}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C9A227]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
-            <Sparkles className="h-4 w-4 text-[#b9911f]" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#8b6816]">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-background/30 px-4 py-2 backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">
               The Celebration Details
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
-            Wedding <span className="text-[#C9A227]">Details</span>
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-primary md:text-6xl">
+            Wedding <span className="text-primary">Details</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#6a5147] md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-primary md:text-lg">
             A sacred day of love, family, blessings, and timeless tradition.
             We would be honoured by your presence as we celebrate together.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">❋</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-secondary/40" />
+            <span className="text-primary">❋</span>
+            <span className="h-px w-12 bg-secondary/40" />
           </div>
         </motion.div>
 
@@ -137,18 +137,18 @@ export function EventDetails() {
           viewport={viewportSettings}
           className="relative mx-auto max-w-6xl"
         >
-          <div className="absolute inset-0 rounded-[2rem] bg-[#C9A227]/10 blur-2xl" />
-          <div className="absolute -inset-4 rounded-[2.2rem] border border-[#C9A227]/12" />
+          <div className="absolute inset-0 rounded-[2rem] bg-secondary/10 blur-2xl" />
+          <div className="absolute -inset-4 rounded-[2.2rem] border border-secondary/12" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#C9A227]/20 bg-[linear-gradient(180deg,rgba(92,15,29,0.95)_0%,rgba(56,8,17,0.98)_100%)] px-6 py-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)] md:px-10 md:py-14">
+          <div className="relative overflow-hidden rounded-[2rem] border border-secondary/20 bg-[linear-gradient(180deg,rgba(92,15,29,0.95)_0%,rgba(56,8,17,0.98)_100%)] px-6 py-10 shadow-md shadow-foreground/20 md:px-10 md:py-14">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.16),transparent_35%)]" />
-            <div className="absolute inset-4 rounded-[1.6rem] border border-[#f5e6c8]/10" />
+            <div className="absolute inset-4 rounded-[1.6rem] border border-secondary/10" />
 
             {/* Corner ornaments */}
-            <div className="absolute left-5 top-5 h-12 w-12 rounded-tl-xl border-l border-t border-[#C9A227]/40" />
-            <div className="absolute right-5 top-5 h-12 w-12 rounded-tr-xl border-r border-t border-[#C9A227]/40" />
-            <div className="absolute bottom-5 left-5 h-12 w-12 rounded-bl-xl border-b border-l border-[#C9A227]/40" />
-            <div className="absolute bottom-5 right-5 h-12 w-12 rounded-br-xl border-b border-r border-[#C9A227]/40" />
+            <div className="absolute left-5 top-5 h-12 w-12 rounded-tl-xl border-l border-t border-secondary/40" />
+            <div className="absolute right-5 top-5 h-12 w-12 rounded-tr-xl border-r border-t border-secondary/40" />
+            <div className="absolute bottom-5 left-5 h-12 w-12 rounded-bl-xl border-b border-l border-secondary/40" />
+            <div className="absolute bottom-5 right-5 h-12 w-12 rounded-br-xl border-b border-r border-secondary/40" />
 
             {/* Center icon */}
             <motion.div
@@ -158,8 +158,8 @@ export function EventDetails() {
               viewport={viewportSettings}
               className="relative mb-10 flex justify-center"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#C9A227]/30 bg-[radial-gradient(circle_at_top,#f8edc8_0%,#dcb955_40%,#b8891b_100%)] shadow-[0_12px_30px_rgba(201,162,39,0.25)]">
-                <Crown className="h-7 w-7 text-[#5d1321]" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-secondary/30 bg-[radial-gradient(circle_at_top,#f8edc8_0%,#dcb955_40%,#b8891b_100%)] shadow-md shadow-foreground/20">
+                <Crown className="h-7 w-7 text-primary" />
               </div>
             </motion.div>
 
@@ -176,11 +176,11 @@ export function EventDetails() {
                     transition={{ duration: 0.8, delay: idx * 0.15 + 0.2 }}
                     viewport={viewportSettings}
                     whileHover={{ y: -6 }}
-                    className="group relative overflow-hidden rounded-[1.6rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(245,230,200,0.04)_100%)] p-7 text-center backdrop-blur-sm transition-all"
+                    className="group relative overflow-hidden rounded-[1.6rem] border border-secondary/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(245,230,200,0.04)_100%)] p-7 text-center backdrop-blur-sm transition-all"
                   >
                     {/* shimmer */}
                     <motion.div
-                      className="pointer-events-none absolute inset-y-0 left-[-30%] w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/25 to-transparent"
+                      className="pointer-events-none absolute inset-y-0 left-[-30%] w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-background/25 to-transparent"
                       animate={{ left: ['-35%', '130%'] }}
                       transition={{
                         duration: 3.4,
@@ -190,7 +190,7 @@ export function EventDetails() {
                       }}
                     />
 
-                    <div className="absolute inset-3 rounded-[1.2rem] border border-[#f5e6c8]/8" />
+                    <div className="absolute inset-3 rounded-[1.2rem] border border-secondary/8" />
 
                     <div className="relative z-10">
                       <motion.div
@@ -203,21 +203,21 @@ export function EventDetails() {
                         }}
                         className="mb-5 flex justify-center"
                       >
-                        <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[linear-gradient(180deg,rgba(245,230,200,0.12),rgba(255,255,255,0.04))]">
-                          <div className="absolute inset-2 rounded-full border border-[#f5e6c8]/10" />
-                          <Icon className="relative z-10 h-8 w-8 text-[#e3c261]" />
+                        <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-secondary/25 bg-[linear-gradient(180deg,rgba(245,230,200,0.12),rgba(255,255,255,0.04))]">
+                          <div className="absolute inset-2 rounded-full border border-secondary/10" />
+                          <Icon className="relative z-10 h-8 w-8 text-primary" />
                         </div>
                       </motion.div>
 
-                      <p className="mb-3 text-[11px] uppercase tracking-[0.35em] text-[#d8bb62]">
+                      <p className="mb-3 text-[11px] uppercase tracking-[0.35em] text-primary">
                         {detail.label}
                       </p>
 
-                      <h3 className="font-serif text-2xl font-light leading-snug text-[#fff1d8] md:text-3xl">
+                      <h3 className="font-serif text-2xl font-light leading-snug text-primary md:text-3xl">
                         {detail.value}
                       </h3>
 
-                      <p className="mt-2 text-sm uppercase tracking-[0.2em] text-[#f5e6c8]/60">
+                      <p className="mt-2 text-sm uppercase tracking-[0.2em] text-primary/60">
                         {detail.detail}
                       </p>
 
@@ -226,7 +226,7 @@ export function EventDetails() {
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.35 + idx * 0.15 }}
                         viewport={viewportSettings}
-                        className="mx-auto mt-5 h-px w-14 origin-left bg-gradient-to-r from-transparent via-[#C9A227] to-transparent"
+                        className="mx-auto mt-5 h-px w-14 origin-left bg-gradient-to-r from-transparent via-[#AE925D] to-transparent"
                       />
                     </div>
                   </motion.div>
@@ -236,9 +236,9 @@ export function EventDetails() {
 
             {/* Decorative divider */}
             <div className="mt-12 flex items-center justify-center gap-3">
-              <span className="h-px w-12 bg-[#C9A227]/35" />
-              <span className="text-[#C9A227]">✦</span>
-              <span className="h-px w-12 bg-[#C9A227]/35" />
+              <span className="h-px w-12 bg-secondary/35" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-secondary/35" />
             </div>
 
             {/* Quote / closing line */}
@@ -249,7 +249,7 @@ export function EventDetails() {
               viewport={viewportSettings}
               className="mt-10 text-center"
             >
-              <p className="font-serif text-lg italic text-[#f5e6c8]/85 md:text-xl">
+              <p className="font-serif text-lg italic text-primary/85 md:text-xl">
                 Join us for a day where two families, countless blessings, and one beautiful story come together.
               </p>
             </motion.div>
@@ -264,16 +264,16 @@ export function EventDetails() {
           viewport={viewportSettings}
           className="mx-auto mt-14 max-w-4xl"
         >
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.96)_0%,rgba(245,230,200,0.92)_100%)] px-8 py-8 shadow-[0_18px_50px_rgba(104,47,18,0.08)]">
-            <div className="absolute inset-3 rounded-[1.3rem] border border-[#C9A227]/10" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-secondary/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.96)_0%,rgba(245,230,200,0.92)_100%)] px-8 py-8 shadow-md shadow-foreground/20">
+            <div className="absolute inset-3 rounded-[1.3rem] border border-secondary/10" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.12),transparent_30%)]" />
 
             <div className="relative z-10 text-center">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#a37d1e]">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-primary">
                 With Love & Honour
               </p>
 
-              <p className="mx-auto mt-4 max-w-3xl text-lg font-light leading-8 text-[#4f3d34]">
+              <p className="mx-auto mt-4 max-w-3xl text-lg font-light leading-8 text-primary">
                 Join us for a day of celebration as we unite two families and countless hearts in the sacred bond of matrimony. Your presence will make our celebration even more special.
               </p>
             </div>

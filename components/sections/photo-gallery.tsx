@@ -37,7 +37,7 @@ export function PhotoGallery() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 px-4 bg-white overflow-hidden">
+    <section className="relative py-20 md:py-32 px-4 bg-background overflow-hidden">
       {/* Decorative Elements */}
       <motion.div
         animate={{
@@ -48,7 +48,7 @@ export function PhotoGallery() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute -top-40 -left-40 w-80 h-80 rounded-full border border-gold/5"
+        className="absolute -top-40 -left-40 w-80 h-80 rounded-full border border-secondary/5"
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -60,8 +60,8 @@ export function PhotoGallery() {
           viewport={viewportSettings}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-serif font-light text-gold mb-4">Our Moments</h2>
-          <div className="w-16 h-1 bg-gold/30 mx-auto" />
+          <h2 className="text-5xl font-serif font-light text-secondary mb-4">Our Moments</h2>
+          <div className="w-16 h-1 bg-secondary/30 mx-auto" />
         </motion.div>
 
         {/* Gallery Grid */}
@@ -92,8 +92,8 @@ export function PhotoGallery() {
                   className="absolute inset-0 bg-gradient-to-t from-dark-text/40 via-transparent to-transparent flex items-end justify-start p-6"
                 >
                   <div className="space-y-2">
-                    <h3 className="text-white text-xl font-serif font-light">{item.title}</h3>
-                    <p className="text-white/80 text-sm font-light">{item.category}</p>
+                    <h3 className="text-background text-xl font-serif font-light">{item.title}</h3>
+                    <p className="text-background/80 text-sm font-light">{item.category}</p>
                   </div>
                 </motion.div>
 
@@ -118,7 +118,7 @@ export function PhotoGallery() {
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '100%' }}
                   transition={{ duration: 0.6 }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-background to-transparent opacity-30"
                 />
               </div>
 
@@ -127,7 +127,7 @@ export function PhotoGallery() {
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 rounded-lg border-2 border-gold/50"
+                className="absolute inset-0 rounded-lg border-2 border-secondary/50"
               />
             </motion.div>
           ))}
@@ -147,7 +147,7 @@ export function PhotoGallery() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-3 border-2 border-gold text-gold font-light rounded-lg hover:bg-gold hover:text-white transition-colors duration-300"
+            className="px-8 py-3 border-2 border-secondary text-secondary font-light rounded-lg hover:bg-secondary hover:text-background transition-colors duration-300"
           >
             View Full Gallery
           </motion.button>

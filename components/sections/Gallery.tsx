@@ -79,9 +79,9 @@ export default function Gallery() {
     >
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#C9A227]/12 blur-3xl" />
-        <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#fff1d8]/16 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-secondary/12 blur-3xl" />
+        <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-secondary/16 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-secondary/10 blur-3xl" />
       </div>
 
       {/* Pattern overlay */}
@@ -104,7 +104,7 @@ export default function Gallery() {
         {floatingParticles.map((particle) => (
           <motion.span
             key={particle.id}
-            className="absolute h-1.5 w-1.5 rounded-full bg-[#f5d77b]/60"
+            className="absolute h-1.5 w-1.5 rounded-full bg-secondary/60"
             style={{ left: particle.left, top: particle.top }}
             animate={{
               opacity: [0, 0.8, 0],
@@ -124,9 +124,9 @@ export default function Gallery() {
       {/* Top divider */}
       <div className="pointer-events-none absolute inset-x-0 top-10 flex justify-center">
         <div className="flex items-center gap-4">
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-          <span className="text-[#C9A227]">✦</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#AE925D]/70" />
+          <span className="text-primary">✦</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#AE925D]/70" />
         </div>
       </div>
 
@@ -138,25 +138,25 @@ export default function Gallery() {
           transition={{ duration: 0.9 }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <div className="mb-4 inline-flex items-center rounded-full border border-[#C9A227]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#8b6816]">
+          <div className="mb-4 inline-flex items-center rounded-full border border-secondary/20 bg-background/30 px-4 py-2 backdrop-blur-sm">
+            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">
               Cherished Memories
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
-            Our <span className="text-[#C9A227]">Moments</span>
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-primary md:text-6xl">
+            Our <span className="text-primary">Moments</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#6a5147] md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-primary md:text-lg">
             A collection of memories that shaped our story, captured in moments
             of laughter, love, and beautiful beginnings.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">❋</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-secondary/40" />
+            <span className="text-primary">❋</span>
+            <span className="h-px w-12 bg-secondary/40" />
           </div>
         </motion.div>
 
@@ -174,12 +174,12 @@ export default function Gallery() {
               className={`group relative ${item.size === 'large' ? 'md:min-h-[520px]' : 'md:min-h-[420px]'
                 }`}
             >
-              <div className="relative h-[420px] overflow-hidden rounded-[2rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.08)_0%,rgba(245,230,200,0.04)_100%)] shadow-[0_24px_60px_rgba(20,8,12,0.22)] md:h-full">
+              <div className="relative h-[420px] overflow-hidden rounded-[2rem] border border-secondary/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.08)_0%,rgba(245,230,200,0.04)_100%)] shadow-md shadow-foreground/20 md:h-full">
                 {/* Outer glow */}
-                <div className="absolute inset-0 rounded-[2rem] bg-[#C9A227]/8 blur-2xl" />
+                <div className="absolute inset-0 rounded-[2rem] bg-secondary/8 blur-2xl" />
 
                 {/* Inner frame */}
-                <div className="absolute inset-3 z-20 rounded-[1.5rem] border border-[#f5e6c8]/12" />
+                <div className="absolute inset-3 z-20 rounded-[1.5rem] border border-secondary/12" />
 
                 {/* Image */}
                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
@@ -206,7 +206,7 @@ export default function Gallery() {
 
                 {/* Shimmer */}
                 <motion.div
-                  className="pointer-events-none absolute inset-y-0 left-[-30%] z-20 w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/25 to-transparent"
+                  className="pointer-events-none absolute inset-y-0 left-[-30%] z-20 w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-background/25 to-transparent"
                   animate={{ left: ['-35%', '130%'] }}
                   transition={{
                     duration: 3.6,
@@ -217,10 +217,10 @@ export default function Gallery() {
                 />
 
                 {/* Corner ornaments */}
-                <div className="absolute left-5 top-5 z-20 h-10 w-10 rounded-tl-xl border-l border-t border-[#C9A227]/40" />
-                <div className="absolute right-5 top-5 z-20 h-10 w-10 rounded-tr-xl border-r border-t border-[#C9A227]/40" />
-                <div className="absolute bottom-5 left-5 z-20 h-10 w-10 rounded-bl-xl border-b border-l border-[#C9A227]/40" />
-                <div className="absolute bottom-5 right-5 z-20 h-10 w-10 rounded-br-xl border-b border-r border-[#C9A227]/40" />
+                <div className="absolute left-5 top-5 z-20 h-10 w-10 rounded-tl-xl border-l border-t border-secondary/40" />
+                <div className="absolute right-5 top-5 z-20 h-10 w-10 rounded-tr-xl border-r border-t border-secondary/40" />
+                <div className="absolute bottom-5 left-5 z-20 h-10 w-10 rounded-bl-xl border-b border-l border-secondary/40" />
+                <div className="absolute bottom-5 right-5 z-20 h-10 w-10 rounded-br-xl border-b border-r border-secondary/40" />
 
                 {/* Content */}
                 <div className="absolute inset-x-0 bottom-0 z-30 p-8 md:p-10">
@@ -230,29 +230,29 @@ export default function Gallery() {
                     transition={{ duration: 0.35 }}
                     className="max-w-md"
                   >
-                    <p className="mb-3 text-[11px] uppercase tracking-[0.34em] text-[#d8bb62]">
+                    <p className="mb-3 text-[11px] uppercase tracking-[0.34em] text-primary">
                       Memory {String(index + 1).padStart(2, '0')}
                     </p>
 
-                    <h3 className="font-serif text-3xl font-light text-[#fff1d8] md:text-4xl">
+                    <h3 className="font-serif text-3xl font-light text-primary md:text-4xl">
                       {item.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-7 text-[#f5e6c8]/85 md:text-base">
+                    <p className="mt-3 text-sm leading-7 text-primary/85 md:text-base">
                       {item.description}
                     </p>
 
                     <div className="mt-5 flex items-center gap-3">
-                      <span className="h-px w-10 bg-[#C9A227]/40" />
-                      <span className="text-[#C9A227]">✦</span>
-                      <span className="h-px w-10 bg-[#C9A227]/40" />
+                      <span className="h-px w-10 bg-secondary/40" />
+                      <span className="text-primary">✦</span>
+                      <span className="h-px w-10 bg-secondary/40" />
                     </div>
                   </motion.div>
                 </div>
 
                 {/* Hover border accent */}
                 <motion.div
-                  className="pointer-events-none absolute inset-0 rounded-[2rem] border border-[#C9A227]/0"
+                  className="pointer-events-none absolute inset-0 rounded-[2rem] border border-secondary/0"
                   whileHover={{ borderColor: 'rgba(201,162,39,0.35)' }}
                   transition={{ duration: 0.3 }}
                 />
@@ -269,12 +269,12 @@ export default function Gallery() {
           className="mx-auto mt-16 max-w-3xl text-center"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">✦</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-secondary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-secondary/40" />
           </div>
 
-          <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">
+          <p className="font-serif text-xl font-light italic text-primary md:text-2xl">
             Every memory has led us gently toward this beautiful beginning.
           </p>
         </motion.div>

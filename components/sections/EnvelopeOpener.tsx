@@ -35,7 +35,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center bg-background overflow-hidden gap-0">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ivory via-champagne to-white opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-ivory via-champagne to-background opacity-50" />
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none">
@@ -72,7 +72,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
           onClick={handleClick}
         >
           <motion.div
-            className="relative w-80 sm:w-96 h-56 sm:h-64 bg-white rounded-lg shadow-2xl cursor-pointer"
+            className="relative w-80 sm:w-96 h-56 sm:h-64 bg-background rounded-lg shadow-2xl cursor-pointer"
             style={{
               boxShadow: '0 20px 60px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.15)',
             }}
@@ -102,7 +102,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
 
             {/* Envelope body */}
             <div className="absolute inset-0 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-white flex flex-col items-center justify-center">
+              <div className="w-full h-full bg-background flex flex-col items-center justify-center">
                 <div className="text-center space-y-2 mt-16">
                   <p className="text-sm tracking-[0.3em] uppercase font-light" style={{ color: 'var(--primary)' }}>
                     You are invited to
@@ -125,7 +125,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
 
           {/* Card sliding out */}
           <motion.div
-            className="absolute top-1/2 left-1/2 w-80 h-96 bg-white rounded-lg shadow-2xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-80 h-96 bg-background rounded-lg shadow-2xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             animate={isOpening ? { y: -300, opacity: 1, scale: 1 } : { y: 0, opacity: 0, scale: 0.8 }}
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
             style={{ boxShadow: '0 30px 80px rgba(212, 175, 55, 0.2), 0 0 60px rgba(212, 175, 55, 0.1)' }}
@@ -157,9 +157,9 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
               onClick={handleClick}
               whileHover={{ scale: 1.07, boxShadow: '0 0 36px rgba(212,175,55,0.55)' }}
               whileTap={{ scale: 0.96 }}
-              className="px-10 py-3 rounded-full font-serif text-base sm:text-lg tracking-widest uppercase text-white"
+              className="px-10 py-3 rounded-full font-serif text-base sm:text-lg tracking-widest uppercase text-background"
               style={{
-                background: 'linear-gradient(135deg, #D4AF37 0%, #c9a227 100%)',
+                background: 'linear-gradient(135deg, #AC8E73 0%, #AE925D 100%)',
                 boxShadow: '0 8px 30px rgba(212,175,55,0.4)',
               }}
             >

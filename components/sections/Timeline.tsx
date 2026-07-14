@@ -103,7 +103,7 @@ export default function Timeline() {
               >
                 {/* Timeline dot */}
                 <motion.div
-                  className="absolute left-0 md:left-1/2 top-8 w-8 h-8 -translate-x-1/2 rounded-full bg-white flex items-center justify-center"
+                  className="absolute left-0 md:left-1/2 top-8 w-8 h-8 -translate-x-1/2 rounded-full bg-background flex items-center justify-center"
                   style={{
                     boxShadow: `0 0 20px rgba(212, 175, 55, 0.4)`,
                     borderWidth: '3px',
@@ -123,7 +123,7 @@ export default function Timeline() {
                 {/* Content */}
                 <div className={`flex-1 pt-2 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'} ml-8 md:ml-0`}>
                   <motion.div
-                    className="rounded-lg p-6 bg-white"
+                    className="rounded-lg p-6 bg-background"
                     style={{
                       boxShadow:
                         '0 10px 30px rgba(212, 175, 55, 0.1), 0 0 20px rgba(212, 175, 55, 0.05)',

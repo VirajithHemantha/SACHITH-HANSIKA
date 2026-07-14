@@ -10,24 +10,24 @@ const storyItems = [
     id: 0,
     chapter: "Chapter I",
     title: "How We Met",
-    subtitle: "2012",
-    content: "We met in 2012, 14 years ago. What began as friendship slowly grew into deep love, trust, and a lifelong bond.",
+    subtitle: "2020",
+    content: "In a world connected by technology, fate brought us together online in 2020, where a simple conversation blossomed into a genuine and lasting love.",
     icon: Stars,
-    color: "#ff4d6d",
+    color: "var(--foreground)",
     gradient: "from-[#ff4d6d]/10 to-[#ffb3c1]/20",
-    accentBg: "bg-[#ff4d6d]",
-    tag: "2012",
+    accentBg: "bg-secondary",
+    tag: "2020",
   },
   {
     id: 1,
     chapter: "Chapter II",
     title: "Years Together",
-    subtitle: "14 Years of Love",
+    subtitle: "2020 to 2026",
     content: "Over the years, we supported each other through every season of life. Today, with grateful hearts, we are ready to begin our forever as husband and wife.",
     icon: BookHeart,
-    color: "#c084fc",
+    color: "var(--foreground)",
     gradient: "from-[#c084fc]/10 to-[#e9d5ff]/20",
-    accentBg: "bg-[#c084fc]",
+    accentBg: "bg-secondary",
     tag: "Journey",
   },
   {
@@ -37,9 +37,9 @@ const storyItems = [
     subtitle: "A Sacred Yes",
     content: "With prayer and joy, we said yes to this new chapter. Your love and blessings make this day even more meaningful.",
     icon: Camera,
-    color: "#f59e42",
+    color: "var(--foreground)",
     gradient: "from-[#f59e42]/10 to-[#fde68a]/20",
-    accentBg: "bg-[#f59e42]",
+    accentBg: "bg-secondary",
     tag: "Promise",
   },
   {
@@ -49,9 +49,9 @@ const storyItems = [
     subtitle: "Our Wedding Day",
     content: "Now we celebrate our wedding day with the people we love. Thank you for being part of our story.",
     icon: PartyPopper,
-    color: "#10b981",
+    color: "var(--foreground)",
     gradient: "from-[#10b981]/10 to-[#a7f3d0]/20",
-    accentBg: "bg-[#10b981]",
+    accentBg: "bg-secondary",
     tag: "Forever",
   },
 ];
@@ -81,7 +81,7 @@ export default function StorySection() {
   return (
     <section
       ref={ref}
-      className="relative px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden bg-[#faf7f2]"
+      className="relative px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden bg-secondary"
       style={{ minHeight: 'auto' }}
     >
       {/* ── Subtle background texture ── */}
@@ -106,14 +106,14 @@ export default function StorySection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-10 md:mb-12"
         >
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border-2 border-white shadow-md rounded-full px-5 py-2 mb-5">
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#ff8fa3]">Our Love Story</span>
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
+          <div className="inline-flex items-center gap-2 bg-background/80 backdrop-blur-md border-2 border-background shadow-md rounded-full px-5 py-2 mb-5">
+            <Heart className="w-4 h-4 text-primary fill-[#ff8fa3]" />
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary">Our Love Story</span>
+            <Heart className="w-4 h-4 text-primary fill-[#ff8fa3]" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#4a3b3c] leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary leading-tight">
             Written in the{' '}
-            <span className="italic text-[#ff4d6d] relative inline-block">
+            <span className="italic text-primary relative inline-block">
               Stars
               <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
                 <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#ff8fa3" strokeWidth="2.5" fill="none" strokeLinecap="round" />
@@ -137,8 +137,8 @@ export default function StorySection() {
                 key={s.id}
                 onClick={() => go(i)}
                 className={`group relative flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition-all duration-300 border-2 ${active === i
-                  ? 'bg-white shadow-lg border-white scale-105'
-                  : 'bg-white/50 border-transparent hover:bg-white/70'
+                  ? 'bg-background shadow-lg border-background scale-105'
+                  : 'bg-background/50 border-transparent hover:bg-background/70'
                   }`}
               >
                 <div
@@ -146,8 +146,8 @@ export default function StorySection() {
                   style={{ backgroundColor: active === i ? s.color : '#d1a0aa' }}
                 />
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-wider text-[#c0a0a8]">{s.chapter}</p>
-                  <p className={`text-[11px] font-semibold leading-tight transition-colors ${active === i ? 'text-[#4a3b3c]' : 'text-[#9a7a7e]'}`}>
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-primary">{s.chapter}</p>
+                  <p className={`text-[11px] font-semibold leading-tight transition-colors ${active === i ? 'text-primary' : 'text-primary'}`}>
                     {s.title}
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function StorySection() {
           </div>
 
           {/* ── Center: Main Story Card ── */}
-          <div className="relative flex-1 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white shadow-[0_20px_60px_rgba(255,143,163,0.18)] border-2 border-white min-h-[340px] md:min-h-[380px]">
+          <div className="relative flex-1 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-background shadow-md shadow-foreground/20 border-2 border-background min-h-[340px] md:min-h-[380px]">
 
             {/* Gradient layer behind content */}
             <AnimatePresence custom={dir} mode="wait">
@@ -188,9 +188,9 @@ export default function StorySection() {
                   {/* Top row */}
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#c0a0a8]">{item.chapter}</span>
-                      <h3 className="font-serif text-3xl md:text-4xl text-[#4a3b3c] mt-1 leading-tight">{item.title}</h3>
-                      <p className="text-sm font-semibold text-[#9a7a7e] mt-1">{item.subtitle}</p>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{item.chapter}</span>
+                      <h3 className="font-serif text-3xl md:text-4xl text-primary mt-1 leading-tight">{item.title}</h3>
+                      <p className="text-sm font-semibold text-primary mt-1">{item.subtitle}</p>
                     </div>
                     {/* Icon bubble */}
                     <div
@@ -202,7 +202,7 @@ export default function StorySection() {
                   </div>
 
                   {/* Story text */}
-                  <p className="text-[#6e5457] text-base md:text-lg leading-relaxed font-medium flex-1 flex items-center">
+                  <p className="text-primary text-base md:text-lg leading-relaxed font-medium flex-1 flex items-center">
                     {item.content}
                   </p>
 
@@ -229,7 +229,7 @@ export default function StorySection() {
 
                     {/* Tag pill */}
                     <span
-                      className="text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full text-white shadow-sm"
+                      className="text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full text-background shadow-sm"
                       style={{ backgroundColor: item.color }}
                     >
                       {item.tag}
@@ -242,15 +242,15 @@ export default function StorySection() {
             {/* Arrow nav buttons — only inside card on md+ */}
             <button
               onClick={prev}
-              className="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/80 hover:bg-white backdrop-blur-sm rounded-full items-center justify-center shadow-md border border-white/80 transition-all hover:scale-110"
+              className="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-background/80 hover:bg-background backdrop-blur-sm rounded-full items-center justify-center shadow-md border border-background/80 transition-all hover:scale-110"
             >
-              <ChevronLeft className="w-5 h-5 text-[#4a3b3c]" />
+              <ChevronLeft className="w-5 h-5 text-primary" />
             </button>
             <button
               onClick={next}
-              className="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/80 hover:bg-white backdrop-blur-sm rounded-full items-center justify-center shadow-md border border-white/80 transition-all hover:scale-110"
+              className="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-background/80 hover:bg-background backdrop-blur-sm rounded-full items-center justify-center shadow-md border border-background/80 transition-all hover:scale-110"
             >
-              <ChevronRight className="w-5 h-5 text-[#4a3b3c]" />
+              <ChevronRight className="w-5 h-5 text-primary" />
             </button>
           </div>
 
@@ -278,7 +278,7 @@ export default function StorySection() {
                   <p className="text-3xl font-serif font-bold" style={{ color: item.color }}>
                     {String(active + 1).padStart(2, '0')}
                   </p>
-                  <p className="text-xs text-[#c0a0a8] font-semibold">
+                  <p className="text-xs text-primary font-semibold">
                     /{String(storyItems.length).padStart(2, '0')}
                   </p>
                 </div>
@@ -308,9 +308,9 @@ export default function StorySection() {
           <div className="flex items-center gap-6">
             <button
               onClick={prev}
-              className="w-11 h-11 bg-white hover:bg-white/90 rounded-full flex items-center justify-center shadow-md border border-white/80 transition-all active:scale-95"
+              className="w-11 h-11 bg-background hover:bg-background/90 rounded-full flex items-center justify-center shadow-md border border-background/80 transition-all active:scale-95"
             >
-              <ChevronLeft className="w-5 h-5 text-[#4a3b3c]" />
+              <ChevronLeft className="w-5 h-5 text-primary" />
             </button>
             {/* Dot indicators */}
             <div className="flex items-center gap-1.5">
@@ -329,9 +329,9 @@ export default function StorySection() {
             </div>
             <button
               onClick={next}
-              className="w-11 h-11 bg-white hover:bg-white/90 rounded-full flex items-center justify-center shadow-md border border-white/80 transition-all active:scale-95"
+              className="w-11 h-11 bg-background hover:bg-background/90 rounded-full flex items-center justify-center shadow-md border border-background/80 transition-all active:scale-95"
             >
-              <ChevronRight className="w-5 h-5 text-[#4a3b3c]" />
+              <ChevronRight className="w-5 h-5 text-primary" />
             </button>
           </div>
 
@@ -342,8 +342,8 @@ export default function StorySection() {
                 key={s.id}
                 onClick={() => go(i)}
                 className={`text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full transition-all duration-300 border-2 ${active === i
-                  ? 'bg-white border-white shadow-md text-[#4a3b3c] scale-105'
-                  : 'bg-white/50 border-transparent text-[#9a7a7e]'
+                  ? 'bg-background border-background shadow-md text-primary scale-105'
+                  : 'bg-background/50 border-transparent text-primary'
                   }`}
               >
                 {s.chapter}

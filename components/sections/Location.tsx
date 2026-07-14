@@ -51,7 +51,7 @@ export default function Location() {
           >
             {/* Venue card */}
             <div
-              className="rounded-lg p-8 bg-white overflow-hidden"
+              className="rounded-lg p-8 bg-background overflow-hidden"
               style={{
                 boxShadow:
                   '0 20px 50px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.08)',

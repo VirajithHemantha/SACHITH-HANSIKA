@@ -6,7 +6,7 @@ import { viewportSettings } from '@/lib/animations';
 
 export function WeddingStory() {
   return (
-    <section className="relative py-20 px-4 md:py-32 bg-white">
+    <section className="relative py-20 px-4 md:py-32 bg-background">
       {/* Decorative Background */}
       <motion.div
         animate={{
@@ -17,7 +17,7 @@ export function WeddingStory() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-20 right-10 w-32 h-32 rounded-full bg-gold/5 blur-2xl"
+        className="absolute top-20 right-10 w-32 h-32 rounded-full bg-secondary/5 blur-2xl"
       />
 
       <div className="max-w-3xl mx-auto">
@@ -29,8 +29,8 @@ export function WeddingStory() {
           viewport={viewportSettings}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-serif font-light text-gold mb-4">Our Story</h2>
-          <div className="w-16 h-1 bg-gold/30 mx-auto" />
+          <h2 className="text-5xl font-serif font-light text-secondary mb-4">Our Story</h2>
+          <div className="w-16 h-1 bg-secondary/30 mx-auto" />
         </motion.div>
 
         {/* Story Content */}
@@ -75,9 +75,9 @@ export function WeddingStory() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={viewportSettings}
-            className="text-center py-12 px-8 border-l-4 border-gold/30 bg-champagne/50 rounded-r-lg"
+            className="text-center py-12 px-8 border-l-4 border-secondary/30 bg-secondary/50 rounded-r-lg"
           >
-            <p className="text-2xl font-serif font-light text-gold italic">
+            <p className="text-2xl font-serif font-light text-secondary italic">
               "Two souls, one heart, and a lifetime of love"
             </p>
           </motion.div>

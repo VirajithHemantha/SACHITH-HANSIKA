@@ -34,7 +34,7 @@ export default function TraditionsTimeline() {
   const { ref, inView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 px-4 bg-white">
+    <section ref={ref} className="relative py-24 md:py-32 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Section title */}
         <motion.div
@@ -94,7 +94,7 @@ export default function TraditionsTimeline() {
                     initial={{ scale: 0, opacity: 0 }}
                     animate={inView ? { scale: 1, opacity: 1 } : {}}
                     transition={{ duration: 0.6, delay: index * 0.15 + 0.1 }}
-                    className="w-20 h-20 rounded-full border-4 border-secondary bg-white flex items-center justify-center text-4xl shadow-lg"
+                    className="w-20 h-20 rounded-full border-4 border-secondary bg-background flex items-center justify-center text-4xl shadow-lg"
                   >
                     {item.icon}
                   </motion.div>

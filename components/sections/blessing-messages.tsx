@@ -78,12 +78,12 @@ export function BlessingMessages() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#2d0810_0%,#4f101c_28%,#6f1525_52%,#f5e6c8_100%)] px-4 py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#291C16_0%,#4A2A18_28%,#5E3A24_52%,#DDB2A2_100%)] px-4 py-24 md:py-32">
       {/* Ambient background layers */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-10 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-[#C9A227]/10 blur-3xl" />
-        <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-[#f5e6c8]/8 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-10 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-secondary/10 blur-3xl" />
+        <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-secondary/8 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-secondary/10 blur-3xl" />
       </div>
 
       {/* Pattern overlay */}
@@ -106,7 +106,7 @@ export function BlessingMessages() {
         {ornaments.map((item) => (
           <motion.div
             key={item.id}
-            className="absolute top-full h-2 w-2 rounded-full bg-[#f1d783]/50 blur-[1px]"
+            className="absolute top-full h-2 w-2 rounded-full bg-secondary/50 blur-[1px]"
             style={{ left: item.left }}
             animate={{
               y: ['0%', '-130vh'],
@@ -127,9 +127,9 @@ export function BlessingMessages() {
       {/* Top ceremonial divider */}
       <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
         <div className="mt-10 flex items-center gap-4">
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-          <span className="text-[#e8cf7a] text-lg">✦</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#AE925D]/70" />
+          <span className="text-primary text-lg">✦</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#AE925D]/70" />
         </div>
       </div>
 
@@ -142,26 +142,26 @@ export function BlessingMessages() {
           viewport={viewportSettings}
           className="mx-auto mb-14 max-w-3xl text-center"
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C9A227]/20 bg-white/5 px-4 py-2 backdrop-blur-sm">
-            <Sparkles className="h-4 w-4 text-[#e6c96a]" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#f5e6c8]/85">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-background/5 px-4 py-2 backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-[11px] uppercase tracking-[0.35em] text-primary/85">
               Shared With Love
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#f8edd7] md:text-6xl">
-            Blessings <span className="text-[#e0bf58]">&</span> Wishes
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-primary md:text-6xl">
+            Blessings <span className="text-primary">&</span> Wishes
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#f5e6c8]/80 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-primary/80 md:text-lg">
             A graceful space for family and friends to leave heartfelt blessings,
             warm wishes, and words of joy for the couple as they begin their new life together.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">❋</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-secondary/40" />
+            <span className="text-primary">❋</span>
+            <span className="h-px w-12 bg-secondary/40" />
           </div>
         </motion.div>
 
@@ -173,31 +173,31 @@ export function BlessingMessages() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={viewportSettings}
-            className="relative overflow-hidden rounded-[2rem] border border-[#C9A227]/20 bg-[linear-gradient(180deg,rgba(245,230,200,0.10)_0%,rgba(255,255,255,0.05)_100%)] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.22)] backdrop-blur-md md:p-8"
+            className="relative overflow-hidden rounded-[2rem] border border-secondary/20 bg-[linear-gradient(180deg,rgba(245,230,200,0.10)_0%,rgba(255,255,255,0.05)_100%)] p-6 shadow-md shadow-foreground/20 backdrop-blur-md md:p-8"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.14),transparent_40%)]" />
-            <div className="absolute inset-3 rounded-[1.5rem] border border-[#f5e6c8]/10" />
+            <div className="absolute inset-3 rounded-[1.5rem] border border-secondary/10" />
 
             <div className="relative">
-              <p className="text-[11px] uppercase tracking-[0.35em] text-[#e5cb77]">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-primary">
                 Leave Your Blessing
               </p>
 
-              <h3 className="mt-4 font-serif text-3xl font-light text-[#fff4df]">
+              <h3 className="mt-4 font-serif text-3xl font-light text-primary">
                 Share a message
                 <br />
                 from the heart
               </h3>
 
-              <p className="mt-4 max-w-md text-sm leading-7 text-[#f5e6c8]/75">
+              <p className="mt-4 max-w-md text-sm leading-7 text-primary/75">
                 Your words will become part of this beautiful celebration. Leave a blessing,
                 a prayer, or a cherished wish for the couple’s journey ahead.
               </p>
 
-              <div className="mt-8 flex items-center gap-3 text-[#f1d98e]">
-                <span className="h-px w-10 bg-[#C9A227]/40" />
+              <div className="mt-8 flex items-center gap-3 text-primary">
+                <span className="h-px w-10 bg-secondary/40" />
                 <span>✦</span>
-                <span className="h-px w-10 bg-[#C9A227]/40" />
+                <span className="h-px w-10 bg-secondary/40" />
               </div>
 
               <div className="mt-8">
@@ -214,9 +214,9 @@ export function BlessingMessages() {
                         whileHover={{ y: -2, scale: 1.01 }}
                         whileTap={{ scale: 0.985 }}
                         onClick={() => setShowForm(true)}
-                        className="group inline-flex items-center gap-3 rounded-full border border-[#C9A227]/35 bg-[linear-gradient(180deg,rgba(201,162,39,0.15),rgba(201,162,39,0.08))] px-6 py-3 text-sm uppercase tracking-[0.2em] text-[#fff2d0] shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition-all"
+                        className="group inline-flex items-center gap-3 rounded-full border border-secondary/35 bg-[linear-gradient(180deg,rgba(201,162,39,0.15),rgba(201,162,39,0.08))] px-6 py-3 text-sm uppercase tracking-[0.2em] text-primary shadow-md shadow-foreground/20 transition-all"
                       >
-                        <PenLine className="h-4 w-4 text-[#e7c96e] transition-transform group-hover:rotate-[-8deg]" />
+                        <PenLine className="h-4 w-4 text-primary transition-transform group-hover:rotate-[-8deg]" />
                         Write a Blessing
                       </motion.button>
                     </motion.div>
@@ -232,24 +232,24 @@ export function BlessingMessages() {
                     >
                       <div className="grid gap-4 md:grid-cols-1">
                         <label className="block">
-                          <span className="mb-2 block text-[11px] uppercase tracking-[0.26em] text-[#e5cb77]">
+                          <span className="mb-2 block text-[11px] uppercase tracking-[0.26em] text-primary">
                             Your Name
                           </span>
                           <div className="relative">
-                            <User2 className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#a98a34]" />
+                            <User2 className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-primary" />
                             <input
                               type="text"
                               placeholder="Enter your name"
                               value={blessingAuthor}
                               onChange={(e) => setBlessingAuthor(e.target.value)}
-                              className="h-12 w-full rounded-2xl border border-[#C9A227]/20 bg-[#fff8ec] pl-11 pr-4 text-sm text-[#4a3327] outline-none transition placeholder:text-[#a08f80] focus:border-[#b89220] focus:ring-2 focus:ring-[#C9A227]/20"
+                              className="h-12 w-full rounded-2xl border border-secondary/20 bg-secondary pl-11 pr-4 text-sm text-primary outline-none transition placeholder:text-primary focus:border-secondary focus:ring-2 focus:ring-[#AE925D]/20"
                               required
                             />
                           </div>
                         </label>
 
                         <label className="block">
-                          <span className="mb-2 block text-[11px] uppercase tracking-[0.26em] text-[#e5cb77]">
+                          <span className="mb-2 block text-[11px] uppercase tracking-[0.26em] text-primary">
                             Your Blessing
                           </span>
                           <textarea
@@ -257,7 +257,7 @@ export function BlessingMessages() {
                             value={newBlessing}
                             onChange={(e) => setNewBlessing(e.target.value)}
                             rows={5}
-                            className="w-full rounded-[1.4rem] border border-[#C9A227]/20 bg-[#fff8ec] px-4 py-3 text-sm leading-7 text-[#4a3327] outline-none transition placeholder:text-[#a08f80] focus:border-[#b89220] focus:ring-2 focus:ring-[#C9A227]/20 resize-none"
+                            className="w-full rounded-[1.4rem] border border-secondary/20 bg-secondary px-4 py-3 text-sm leading-7 text-primary outline-none transition placeholder:text-primary focus:border-secondary focus:ring-2 focus:ring-[#AE925D]/20 resize-none"
                             required
                           />
                         </label>
@@ -268,7 +268,7 @@ export function BlessingMessages() {
                           whileHover={{ y: -2, scale: 1.01 }}
                           whileTap={{ scale: 0.985 }}
                           type="submit"
-                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[linear-gradient(180deg,#c9a227_0%,#ae8418_100%)] px-5 py-3 text-sm uppercase tracking-[0.2em] text-white shadow-[0_14px_28px_rgba(117,84,12,0.28)]"
+                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[linear-gradient(180deg,#AE925D_0%,#ae8418_100%)] px-5 py-3 text-sm uppercase tracking-[0.2em] text-background shadow-md shadow-foreground/20"
                         >
                           <Send className="h-4 w-4" />
                           Post Blessing
@@ -279,7 +279,7 @@ export function BlessingMessages() {
                           whileTap={{ scale: 0.985 }}
                           type="button"
                           onClick={() => setShowForm(false)}
-                          className="rounded-full border border-[#C9A227]/30 bg-white/5 px-5 py-3 text-sm uppercase tracking-[0.2em] text-[#fff0cf] backdrop-blur-sm transition"
+                          className="rounded-full border border-secondary/30 bg-background/5 px-5 py-3 text-sm uppercase tracking-[0.2em] text-primary backdrop-blur-sm transition"
                         >
                           Cancel
                         </motion.button>
@@ -305,11 +305,11 @@ export function BlessingMessages() {
                     exit={{ opacity: 0, y: -18, scale: 0.97 }}
                     transition={{ duration: 0.55, delay: idx * 0.05 }}
                     whileHover={{ y: -4 }}
-                    className="group relative overflow-hidden rounded-[1.8rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-6 shadow-[0_22px_50px_rgba(30,12,16,0.16)] transition-all md:p-7"
+                    className="group relative overflow-hidden rounded-[1.8rem] border border-secondary/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-6 shadow-md shadow-foreground/20 transition-all md:p-7"
                   >
                     {/* decorative layers */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.12),transparent_28%)]" />
-                    <div className="absolute inset-3 rounded-[1.35rem] border border-[#C9A227]/12" />
+                    <div className="absolute inset-3 rounded-[1.35rem] border border-secondary/12" />
                     <div className="absolute left-0 top-0 h-full w-1.5 bg-[linear-gradient(180deg,#d1ac35_0%,#a47913_100%)]" />
 
                     <div className="relative flex items-start justify-between gap-5">
@@ -326,22 +326,22 @@ export function BlessingMessages() {
                               repeat: Infinity,
                               ease: 'easeInOut',
                             }}
-                            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-[#6d1424] shadow-[0_8px_20px_rgba(201,162,39,0.2)]"
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-secondary/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-primary shadow-md shadow-foreground/20"
                           >
                             ✦
                           </motion.div>
 
                           <div>
-                            <h4 className="font-serif text-xl font-light text-[#5f1624]">
+                            <h4 className="font-serif text-xl font-light text-primary">
                               {blessing.author}
                             </h4>
-                            <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-[#a38022]">
+                            <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-primary">
                               {blessing.timestamp}
                             </p>
                           </div>
                         </div>
 
-                        <p className="max-w-2xl text-[15px] leading-8 text-[#4a382f]">
+                        <p className="max-w-2xl text-[15px] leading-8 text-primary">
                           {blessing.message}
                         </p>
                       </div>
@@ -350,13 +350,13 @@ export function BlessingMessages() {
                         whileHover={{ scale: 1.08 }}
                         whileTap={{ scale: 0.94 }}
                         onClick={() => toggleLike(blessing.id)}
-                        className="relative mt-1 flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/18 bg-white/70 shadow-sm backdrop-blur-sm transition"
+                        className="relative mt-1 flex h-11 w-11 items-center justify-center rounded-full border border-secondary/18 bg-background/70 shadow-sm backdrop-blur-sm transition"
                         aria-label="Like blessing"
                       >
                         <Heart
                           className={`h-5 w-5 transition-all ${liked
-                            ? 'fill-[#b11f37] text-[#b11f37]'
-                            : 'fill-[#C9A227]/15 text-[#b7952d]'
+                            ? 'fill-[#b11f37] text-primary'
+                            : 'fill-[#AE925D]/15 text-primary'
                             }`}
                         />
                       </motion.button>
@@ -364,7 +364,7 @@ export function BlessingMessages() {
 
                     {/* subtle shimmer */}
                     <motion.div
-                      className="pointer-events-none absolute inset-y-0 left-[-28%] w-[28%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent"
+                      className="pointer-events-none absolute inset-y-0 left-[-28%] w-[28%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-background/35 to-transparent"
                       animate={{ left: ['-30%', '125%'] }}
                       transition={{
                         duration: 3.2,
@@ -389,12 +389,12 @@ export function BlessingMessages() {
           className="mx-auto mt-16 max-w-3xl text-center"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">✦</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-secondary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-secondary/40" />
           </div>
 
-          <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">
+          <p className="font-serif text-xl font-light italic text-primary md:text-2xl">
             Every blessing becomes part of the love we carry into this new chapter.
           </p>
         </motion.div>

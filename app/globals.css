@@ -3,40 +3,40 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Premium Sri Lankan Kandyan Wedding Theme */
+/* Premium Champagne Light Beige & Rose Gold Theme */
 :root {
-  /* Primary Colors - Royal Maroon & Gold */
-  --maroon-dark: #7A1E1E;
-  --maroon-light: #A82C2C;
-  --gold-primary: #C9A227;
-  --gold-accent: #D4AF37;
-  --ivory: #F5E6C8;
+  /* Primary Colors - Champagne Light Beige & Rose Gold */
+  --champagne-gold: #AE925D;
+  --dark-beige: #AC8E73;
+  --rose-gold: #B77F74;
+  --light-rose-beige: #DDB2A2;
+  --deep-brown: #74472D;
   --cream: #FAF6F0;
   --white: #FFFFFF;
   --text-dark: #1A1A1A;
   --text-muted: #6B6B6B;
   --border-light: #E8DCC8;
-  
+
   /* Design System */
-  --background: var(--cream);
-  --foreground: var(--text-dark);
+  --background: var(--light-rose-beige);
+  --foreground: var(--deep-brown);
   --card: var(--white);
-  --card-foreground: var(--text-dark);
-  --popover: var(--ivory);
-  --popover-foreground: var(--text-dark);
-  --primary: var(--maroon-dark);
-  --primary-foreground: var(--white);
-  --secondary: var(--gold-primary);
-  --secondary-foreground: var(--text-dark);
-  --muted: var(--text-muted);
-  --muted-foreground: var(--ivory);
-  --accent: var(--maroon-light);
+  --card-foreground: var(--deep-brown);
+  --popover: var(--champagne-gold);
+  --popover-foreground: var(--white);
+  --primary: var(--deep-brown);
+  --primary-foreground: var(--light-rose-beige);
+  --secondary: var(--champagne-gold);
+  --secondary-foreground: var(--white);
+  --muted: var(--dark-beige);
+  --muted-foreground: var(--white);
+  --accent: var(--rose-gold);
   --accent-foreground: var(--white);
   --destructive: #DC2626;
   --destructive-foreground: var(--white);
-  --border: var(--border-light);
+  --border: var(--dark-beige);
   --input: var(--white);
-  --ring: var(--gold-primary);
+  --ring: var(--champagne-gold);
   --radius: 0.5rem;
 }
 
@@ -72,33 +72,38 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
-  
+
   h1 {
     @apply text-6xl md:text-7xl font-light leading-tight;
     color: var(--primary);
     font-weight: 300;
   }
-  
+
   h2 {
     @apply text-4xl md:text-5xl font-light leading-tight;
     color: var(--primary);
     font-weight: 300;
   }
-  
+
   h3 {
     @apply text-2xl md:text-3xl font-light leading-snug;
     color: var(--foreground);
     font-weight: 400;
   }
-  
+
   p {
     @apply text-foreground;
     text-wrap: pretty;
@@ -111,12 +116,15 @@
     opacity: 0;
     transform: translateY(0) translateX(0);
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(-100vh) translateX(var(--tx));
@@ -127,26 +135,33 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(201, 162, 39, 0.4);
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(174, 146, 93, 0.4);
   }
+
   50% {
-    box-shadow: 0 0 30px rgba(201, 162, 39, 0.7);
+    box-shadow: 0 0 30px rgba(174, 146, 93, 0.7);
   }
 }
 
 @keyframes glow-maroon {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(122, 30, 30, 0.3);
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(116, 71, 45, 0.3);
   }
+
   50% {
-    box-shadow: 0 0 30px rgba(122, 30, 30, 0.5);
+    box-shadow: 0 0 30px rgba(116, 71, 45, 0.5);
   }
 }
 
@@ -155,6 +170,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -162,16 +178,21 @@
 }
 
 @keyframes lotus-float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(-100vh) rotate(360deg);
     opacity: 0;
@@ -179,9 +200,12 @@
 }
 
 @keyframes pulse-soft {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }

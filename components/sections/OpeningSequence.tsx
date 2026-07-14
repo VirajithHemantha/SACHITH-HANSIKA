@@ -114,8 +114,8 @@ export default function OpeningSequence({ onComplete }: OpeningSequenceProps) {
 
                 <defs>
                   <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%">
-                    <stop offset="0%" stopColor="#C9A227" />
-                    <stop offset="100%" stopColor="#D4AF37" />
+                    <stop offset="0%" stopColor="#AE925D" />
+                    <stop offset="100%" stopColor="#AC8E73" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -130,7 +130,7 @@ export default function OpeningSequence({ onComplete }: OpeningSequenceProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-light mb-6 text-white">
+            <h1 className="text-5xl md:text-7xl font-light mb-6 text-background">
               <span className="block mb-2">VIMUKTHI</span>
               <span className="text-secondary text-3xl md:text-4xl font-light mb-2">&</span>
               <span className="block">PIUMI</span>
@@ -157,7 +157,7 @@ export default function OpeningSequence({ onComplete }: OpeningSequenceProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             onClick={onComplete}
-            className="mt-16 px-8 py-3 bg-secondary text-primary hover:bg-gold-accent transition-colors duration-300 font-light text-lg tracking-widest uppercase"
+            className="mt-16 px-8 py-3 bg-secondary text-primary hover:bg-secondary-accent transition-colors duration-300 font-light text-lg tracking-widest uppercase"
           >
             Enter
           </motion.button>

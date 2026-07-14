@@ -46,16 +46,16 @@ export default function VenueLocation() {
         >
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d8a97d]/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_28px_rgba(195,137,94,0.22)] backdrop-blur-md"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/45 bg-background/70 px-5 py-2.5 shadow-md shadow-foreground/20 backdrop-blur-md"
           >
-            <Sparkles className="h-4 w-4 text-[#c0784e]" />
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#c0784e] sm:text-sm">
-              Church & Function Venues
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-primary sm:text-sm">
+              Wedding Venue
             </span>
           </motion.div>
 
-          <h2 className="font-serif text-4xl font-medium tracking-tight text-[#4a332f] sm:text-5xl md:text-7xl">
-            Venue <span className="relative inline-block text-[#c06f58]">
+          <h2 className="font-serif text-4xl font-medium tracking-tight text-primary sm:text-5xl md:text-7xl">
+            Venue <span className="relative inline-block text-primary">
               Location
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
                 viewBox="0 0 100 20" preserveAspectRatio="none"
@@ -80,7 +80,7 @@ export default function VenueLocation() {
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-[#f2ddc5] bg-white/65 shadow-[0_16px_50px_rgba(184,126,89,0.2)] backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
+            className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-secondary bg-background/65 shadow-md shadow-foreground/20 backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,197,210,0.5),transparent_40%),radial-gradient(circle_at_80%_75%,rgba(226,205,255,0.55),transparent_35%)]" />
 
@@ -93,7 +93,7 @@ export default function VenueLocation() {
               }}
             />
 
-            <div className="absolute inset-0 hidden md:block opacity-55 text-[#c68461]">
+            <div className="absolute inset-0 hidden md:block opacity-55 text-primary">
               <svg width="100%" height="100%" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M90 420 C200 300, 340 300, 470 370 C610 450, 750 440, 900 320" stroke="currentColor" strokeWidth="6" strokeDasharray="10 12" />
                 <path d="M100 520 C260 430, 390 470, 520 540 C670 620, 820 600, 930 500" stroke="currentColor" strokeWidth="3" strokeDasharray="6 10" />
@@ -104,31 +104,31 @@ export default function VenueLocation() {
               <motion.div
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/90 bg-white/85 shadow-[0_0_35px_rgba(201,121,138,0.4)]"
+                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-background/90 bg-background/85 shadow-md shadow-foreground/20"
               >
-                <MapPin className="h-10 w-10 text-[#d55374]" />
-                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-[#d55374] shadow-[0_0_12px_#d55374]" />
+                <MapPin className="h-10 w-10 text-primary" />
+                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-secondary shadow-[0_0_12px_#d55374]" />
               </motion.div>
-              <div className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full border border-[#dba6b5]/80" />
+              <div className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full border border-secondary/80" />
               <motion.div
                 animate={{ scale: [1, 2.5], opacity: [0.75, 0] }}
                 transition={{ duration: 2.3, repeat: Infinity, ease: 'easeOut' }}
-                className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#e3aab8]"
+                className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full bg-secondary"
               />
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/95 to-transparent p-4 pt-16 sm:p-6 md:p-8">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 to-transparent p-4 pt-16 sm:p-6 md:p-8">
               <a
                 href={LIVE_LOCATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 rounded-2xl border border-[#efdcc8] bg-white/85 px-4 py-3 shadow-[0_10px_30px_rgba(183,127,92,0.16)] transition-all hover:bg-white sm:px-5 sm:py-4"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-secondary bg-background/85 px-4 py-3 shadow-md shadow-foreground/20 transition-all hover:bg-background sm:px-5 sm:py-4"
               >
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#be7f56]">Live Location</p>
-                  <h4 className="mt-1 font-serif text-lg text-[#4d3732] sm:text-2xl">St. Joseph's Church - Gonawila</h4>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live Location</p>
+                  <h4 className="mt-1 font-serif text-lg text-primary sm:text-2xl">Seethawaka Regency</h4>
                 </div>
-                <motion.div whileHover={{ scale: 1.08 }} className="flex h-11 w-11 items-center justify-center rounded-full bg-[#ca7c57] text-white shadow-md">
+                <motion.div whileHover={{ scale: 1.08 }} className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-background shadow-md">
                   <Navigation className="h-5 w-5" />
                 </motion.div>
               </a>
@@ -141,51 +141,42 @@ export default function VenueLocation() {
             transition={{ duration: 1, delay: 0.15, ease: 'easeOut' }}
             className="lg:col-span-4"
           >
-            <div className="h-full rounded-[2rem] border border-[#f1dcc5] bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(255,245,232,0.8)_100%)] p-6 shadow-[0_16px_45px_rgba(183,127,92,0.14)] backdrop-blur-xl md:p-7">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#deb792]/40 bg-white/70 px-4 py-2">
-                <MapPin className="h-4 w-4 text-[#c0784e]" />
-                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#c0784e]">Venue Details</span>
+            <div className="h-full rounded-[2rem] border border-secondary bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(255,245,232,0.8)_100%)] p-6 shadow-md shadow-foreground/20 backdrop-blur-xl md:p-7">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-background/70 px-4 py-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Venue Details</span>
               </div>
 
-              <h3 className="font-serif text-3xl leading-tight text-[#4d3732] md:text-4xl">
-                St. Joseph's<br />Church - Gonawila
+              <h3 className="font-serif text-3xl leading-tight text-primary md:text-4xl">
+                Seethawaka<br />Regency
               </h3>
 
-              <p className="mt-5 text-sm leading-relaxed text-[#7a6258] md:text-base">
-                We warmly invite you to join us at St. Joseph's Church - Gonawila for our holy wedding ceremony.
+              <p className="mt-5 text-sm leading-relaxed text-primary md:text-base">
+                We warmly invite you to join us at Seethawaka Regency - Avissawella for our wedding celebration.
               </p>
 
               <a
                 href={LIVE_LOCATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ca7c57] px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_12px_28px_rgba(183,109,72,0.35)] transition-transform hover:scale-[1.02]"
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-background shadow-md shadow-foreground/20 transition-transform hover:scale-[1.02]"
               >
                 Open Live Location
                 <ExternalLink className="h-4 w-4" />
               </a>
 
-              <div className="mt-6 rounded-2xl border border-[#ead2b9]/60 bg-white/75 p-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#b78058]">Map Link</p>
-                <p className="mt-2 break-all text-xs text-[#7a6258]">
+              <div className="mt-6 rounded-2xl border border-secondary/60 bg-background/75 p-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-primary">Map Link</p>
+                <p className="mt-2 break-all text-xs text-primary">
                   maps.app.goo.gl/pikUWZebfsNYjp4i6
                 </p>
               </div>
 
-              <div className="mt-5 rounded-2xl border border-[#ead2b9]/60 bg-white/75 p-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#b78058]">Function Venue</p>
-                <h4 className="mt-2 font-serif text-xl text-[#4d3732]">Sampath Banquet Hall</h4>
-                <p className="mt-2 text-xs text-[#7a6258]">Function starts at 11:30 AM</p>
-                <a
-                  href={FUNCTION_LOCATION_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#b96f4d] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_10px_24px_rgba(185,111,77,0.3)] transition-transform hover:scale-[1.02]"
-                >
-                  Open Hotel Location
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-                <p className="mt-3 break-all text-xs text-[#7a6258]">maps.app.goo.gl/hPEbCMaPZywmpFQi7</p>
+              <div className="mt-6 rounded-2xl border border-secondary/60 bg-background/75 p-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-primary">Location</p>
+                <p className="mt-2 text-xs text-primary font-medium">
+                  Avissawella
+                </p>
               </div>
             </div>
           </motion.div>
