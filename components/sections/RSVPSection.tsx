@@ -132,7 +132,7 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-primary leading-relaxed">
-            Please respond by August 13, 2026. We would be honored to have you join our wedding celebration.
+            Please respond by August 25, 2026. We would be honored to have you join our wedding celebration.
           </p>
         </motion.div>
 

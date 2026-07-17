@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Clock3, MapPin, Sparkles } from 'lucide-react';
+import { Clock3, MapPin, Sparkles, Calendar, Shirt, Palette } from 'lucide-react';
 
 export default function CeremonyDetails() {
   const { ref, inView } = useInView({
@@ -67,6 +67,24 @@ export default function CeremonyDetails() {
           </div>
 
           <div className="flex flex-col gap-8">
+            {/* Date Block */}
+            <div className="flex items-start gap-5">
+              <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-[#E8DCC8]/60 shadow-inner">
+                <Calendar className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-2">Date</p>
+                <h3 className="font-serif text-2xl text-primary">September 13, 2026</h3>
+                <p className="text-sm text-primary/60 mt-1">Sunday</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <span className="h-px w-full bg-secondary/20" />
+              <div className="h-2 w-2 rotate-45 bg-secondary/40 mx-2" />
+              <span className="h-px w-full bg-secondary/20" />
+            </div>
+
             {/* Venue Block */}
             <div className="flex items-start gap-5">
               <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-[#E8DCC8]/60 shadow-inner">
@@ -112,6 +130,42 @@ export default function CeremonyDetails() {
                 <p className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-2">Celebration Time</p>
                 <h3 className="font-serif text-2xl text-primary">9:54 AM - 4:00 PM</h3>
                 <p className="text-sm text-primary/60 mt-1">Wedding celebration</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <span className="h-px w-full bg-secondary/20" />
+              <div className="h-2 w-2 rotate-45 bg-secondary/40 mx-2" />
+              <span className="h-px w-full bg-secondary/20" />
+            </div>
+
+            {/* Theme Block */}
+            <div className="flex items-start gap-5">
+              <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-[#E8DCC8]/60 shadow-inner">
+                <Palette className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-2">Theme & Colors</p>
+                <h3 className="font-serif text-2xl text-primary">The Rosewood Affair</h3>
+                <p className="text-sm text-primary/60 mt-1">Brownish rose, rose gold, ivory or similar colors</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <span className="h-px w-full bg-secondary/20" />
+              <div className="h-2 w-2 rotate-45 bg-secondary/40 mx-2" />
+              <span className="h-px w-full bg-secondary/20" />
+            </div>
+
+            {/* Dress Code Block */}
+            <div className="flex items-start gap-5">
+              <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-[#E8DCC8]/60 shadow-inner">
+                <Shirt className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-2">Dress Code</p>
+                <h3 className="font-serif text-2xl text-primary">Formal Attire</h3>
+                <p className="text-sm text-primary/60 mt-1">We request the honor of your presence in formal wear</p>
               </div>
             </div>
           </div>

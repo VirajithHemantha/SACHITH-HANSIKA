@@ -21,7 +21,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
     setTimeout(() => {
       setShowContent(true);
       onEnvelopeOpen();
-    }, 2600);
+    }, 5500);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({

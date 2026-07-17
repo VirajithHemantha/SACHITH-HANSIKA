@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
 
-const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/pikUWZebfsNYjp4i6?g_st=iw';
-const FUNCTION_LOCATION_URL = 'https://maps.app.goo.gl/hPEbCMaPZywmpFQi7';
+const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/GtspJHmNJ9daEDMF7';
+const FUNCTION_LOCATION_URL = 'https://maps.app.goo.gl/GtspJHmNJ9daEDMF7';
 
 export default function VenueLocation() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
@@ -168,7 +168,7 @@ export default function VenueLocation() {
               <div className="mt-6 rounded-2xl border border-secondary/60 bg-background/75 p-4">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-primary">Map Link</p>
                 <p className="mt-2 break-all text-xs text-primary">
-                  maps.app.goo.gl/pikUWZebfsNYjp4i6
+                  maps.app.goo.gl/GtspJHmNJ9daEDMF7
                 </p>
               </div>
 
