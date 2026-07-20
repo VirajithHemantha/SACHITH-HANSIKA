@@ -310,8 +310,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     {/* Flap ornament */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="flex h-[72px] w-[72px] -translate-y-8 items-center justify-center rounded-full border-[1px] border-[#FAF6F0]/40 relative">
-                         <div className="absolute inset-1 border-[0.5px] border-[#FAF6F0]/25 rounded-full" />
-                         <span className="font-serif text-2xl text-[#FAF6F0]/90 drop-shadow-md">SH</span>
+                        <div className="absolute inset-1 border-[0.5px] border-[#FAF6F0]/25 rounded-full" />
+                        <span className="font-serif text-2xl text-[#FAF6F0]/90 drop-shadow-md">SH</span>
                       </div>
                     </div>
 
