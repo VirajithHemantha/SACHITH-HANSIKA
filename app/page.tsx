@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { EnvelopeOpener } from '@/components/envelope-opener';
 import HeroSection from '@/components/sections/HeroSection';
 import StorySection from '@/components/sections/StorySection';
@@ -27,7 +27,9 @@ export default function Home() {
       <MusicPlayer />
 
       {!isOpened ? (
-        <EnvelopeOpener onEnvelopeOpen={() => setIsOpened(true)} />
+        <Suspense fallback={<div className="h-screen w-screen bg-background" />}>
+          <EnvelopeOpener onEnvelopeOpen={() => setIsOpened(true)} />
+        </Suspense>
       ) : (
         <>
           <HeroSection />

@@ -1,6 +1,35 @@
+function setup() {
+  var spreadsheetId = '10xbwhVtua_qn2y70cuYmdErqSFs6yvMf-WyQR_ik-Q8';
+  var ss = SpreadsheetApp.openById(spreadsheetId);
+  
+  // Setup RSVP Sheet
+  var rsvpSheet = ss.getSheetByName('rsvp');
+  if (!rsvpSheet) {
+    rsvpSheet = ss.insertSheet('rsvp');
+  }
+  if (rsvpSheet.getLastRow() === 0) {
+    var rsvpHeaders = ['Submitted At', 'Name', 'Guests', 'Dietary Requirements', 'Source'];
+    rsvpSheet.appendRow(rsvpHeaders);
+    rsvpSheet.getRange(1, 1, 1, rsvpHeaders.length).setFontWeight('bold').setBackground('#f3f3f3');
+    rsvpSheet.setFrozenRows(1);
+  }
+
+  // Setup Wish Sheet
+  var wishSheet = ss.getSheetByName('wish');
+  if (!wishSheet) {
+    wishSheet = ss.insertSheet('wish');
+  }
+  if (wishSheet.getLastRow() === 0) {
+    var wishHeaders = ['Submitted At', 'Name', 'Message', 'Source'];
+    wishSheet.appendRow(wishHeaders);
+    wishSheet.getRange(1, 1, 1, wishHeaders.length).setFontWeight('bold').setBackground('#f3f3f3');
+    wishSheet.setFrozenRows(1);
+  }
+}
+
 function doPost(e) {
   try {
-    var spreadsheetId = '1rRXSwHlgJbFhVVsCGf1CWLzDH4JcWOcDp0zyZJmDJ58';
+    var spreadsheetId = '10xbwhVtua_qn2y70cuYmdErqSFs6yvMf-WyQR_ik-Q8';
     var ss = SpreadsheetApp.openById(spreadsheetId);
 
     var body = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -13,10 +42,9 @@ function doPost(e) {
       var rsvpSheet = ss.getSheetByName('rsvp');
       if (!rsvpSheet) {
         rsvpSheet = ss.insertSheet('rsvp');
-      }
-
-      if (rsvpSheet.getLastRow() === 0) {
-        rsvpSheet.appendRow(['submittedAt', 'name', 'guests', 'dietary', 'source']);
+        rsvpSheet.appendRow(['Submitted At', 'Name', 'Guests', 'Dietary Requirements', 'Source']);
+        rsvpSheet.getRange(1, 1, 1, 5).setFontWeight('bold').setBackground('#f3f3f3');
+        rsvpSheet.setFrozenRows(1);
       }
 
       rsvpSheet.appendRow([
@@ -30,10 +58,9 @@ function doPost(e) {
       var wishSheet = ss.getSheetByName('wish');
       if (!wishSheet) {
         wishSheet = ss.insertSheet('wish');
-      }
-
-      if (wishSheet.getLastRow() === 0) {
-        wishSheet.appendRow(['submittedAt', 'name', 'message', 'source']);
+        wishSheet.appendRow(['Submitted At', 'Name', 'Message', 'Source']);
+        wishSheet.getRange(1, 1, 1, 4).setFontWeight('bold').setBackground('#f3f3f3');
+        wishSheet.setFrozenRows(1);
       }
 
       wishSheet.appendRow([

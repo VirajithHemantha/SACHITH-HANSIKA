@@ -209,7 +209,7 @@ export default function BlessingsSection() {
                         type="text"
                         value={visitorName}
                         onChange={(e) => setVisitorName(e.target.value)}
-                        placeholder="John & Jane Doe"
+                        placeholder="Sanjaya & Tharushi"
                         className="h-14 w-full rounded-2xl border border-secondary bg-background/65 pl-12 pr-4 text-primary placeholder-[#d9b89e] outline-none transition-all duration-300 focus:border-secondary focus:bg-background focus:shadow-md shadow-foreground/20 group-hover:bg-background/90"
                         required
                       />

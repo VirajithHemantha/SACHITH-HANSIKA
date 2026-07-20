@@ -175,7 +175,7 @@ export default function RSVPSection() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="John & Jane Doe"
+                        placeholder="Sanjaya & Tharushi"
                         className="w-full rounded-2xl border border-secondary bg-background/65 px-5 py-4 text-primary placeholder-[#d5ab90]/70 outline-none transition-all duration-300 focus:border-secondary focus:bg-background focus:shadow-md shadow-foreground/20 group-hover:bg-background/90"
                       />
                     </div>

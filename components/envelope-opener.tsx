@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSearchParams } from 'next/navigation';
 
 interface EnvelopeOpenerProps {
   onEnvelopeOpen: () => void;
@@ -9,6 +10,9 @@ interface EnvelopeOpenerProps {
 
 export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const searchParams = useSearchParams();
+  const prefix = searchParams.get('p') || '';
+  const guestName = searchParams.get('n') || '';
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -181,7 +185,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           />
 
           {/* Main content */}
-          <div className="relative z-20 flex min-h-screen flex-col items-center justify-center px-6">
+          <div className="relative z-20 flex min-h-[100dvh] flex-col items-center justify-center px-6 -mt-16 sm:-mt-8">
             {/* Intro label */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -196,9 +200,20 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#AE925D]/70" />
               </div>
-              <p className="text-[11px] tracking-[0.24em] text-primary/70">
-                Unveil the moment
-              </p>
+              {guestName ? (
+                <div className="mt-2">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-primary/80 font-medium">
+                    We cordially invite
+                  </p>
+                  <p className="text-[16px] uppercase tracking-[0.1em] text-primary font-bold mt-1">
+                    {prefix} {guestName}
+                  </p>
+                </div>
+              ) : (
+                <p className="text-[11px] tracking-[0.24em] text-primary/70">
+                  Unveil the moment
+                </p>
+              )}
             </motion.div>
 
             {/* Envelope stage */}
@@ -371,7 +386,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                   initial={{ y: 110, opacity: 0, scale: 0.96 }}
                   animate={
                     isOpen
-                      ? { y: -8, opacity: 1, scale: 1 }
+                      ? { y: -48, opacity: 1, scale: 1 }
                       : { y: 110, opacity: 0, scale: 0.96 }
                   }
                   transition={{
